@@ -90,7 +90,7 @@ export class Topic {
       if (logo === null) {
         this.logo = null;
       } else if (logo === undefined) {
-        this.logo = this.getLogoPath(this.getLogoFileName(name))
+        this.logo = this.getLogoPath(this.getLogoFileName(name.toLowerCase()))
       } else {
         this.logo = this.getLogoPath(logo);
       }

@@ -12,23 +12,21 @@ import { topicsOld } from './topics-data-old';
 @Injectable()
 export class TopicsService {
 
-
   public topics: Topic[] = this.transformTags(topicsOld);
 
   constructor(
-
   ) {
     // console.log('topicsArr', topicsArr)
     topicsArr.forEach(t => {
       if ( this.getTopicByIdIfExisting(t.id) ) {
-        console.log('TOPIC DUPLICATE WITH OLD: ', t.id)
+        let errorPrefix = 'TOPIC DUPLICATE WITH OLD topics (old one might be overriding data) : ';
+        console.log(errorPrefix, t.id)
+        window.alert(errorPrefix + ' ' +  t.id)
       }
     })
     this.topics.push(... topicsArr)
     // console.log('all topics', this.topics)
   }
-
-
 
   private transformTags(inputList: (Topic|string)[]): Topic[] {
     let retTopicsArray = []
@@ -76,7 +74,6 @@ export class TopicsService {
   addTopic(topic: Topic|string, topicsArray?: Topic[]) {
     topicsArray = topicsArray || this.topics
 
-
     let newTopic: Topic
 
     if (topic instanceof Topic) {
@@ -84,7 +81,6 @@ export class TopicsService {
     } else {
       newTopic = tag(topic)
     }
-
 
     if ( this.topicExistsById(newTopic.id, topicsArray) ) {
       const message2 = 'Duplicate topic: '
@@ -100,7 +96,6 @@ export class TopicsService {
       }
       // topicsArray.splice(topicsArray.length, 0, ...newTopic.related)
     }
-
     return newTopic
   }
 

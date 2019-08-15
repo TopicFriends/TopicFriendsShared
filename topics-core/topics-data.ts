@@ -113,6 +113,7 @@ export class Frontend {
       'Angular Universal': t()
     }
   })
+  Codelyzer = t()
   'Angular Elements' = t('angular-elements-logo.png')
   'Angular Material' = t()
   AngularJS = tNoIcon({
@@ -154,6 +155,9 @@ export class Frontend {
   AngularFire = tNoIcon()
   NgRx = t()
   NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
+  React = t()
+  Ember = tWide()
+  Redux = t()
   WebSocket = t()
   'Chrome Extensions' = t('chrome.svg')
   'Dexie.js' = t('dexie-js.svg')
@@ -207,9 +211,9 @@ export class Backend {
     ),
   })
 
-  Java = t()
   Hibernate = t()
   Docker = tWide()
+  Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t()
   nginx = tWide()
 }
@@ -227,42 +231,57 @@ export class Testing {
   Jest = t()
   Karma = t()
   Jasmine = t()
-
+  JUnit = t({logo: 'junit-icon.png', logoSize: [125, 84]})
+  TestNG = t({logo: 'testng.png', logoSize: [634, 176]})
   // TODO: TestNG
-  // TODO: JUnit
 }
 
 export class Tools {
   WebStorm = t()
+  RubyMine = t()
+  'Android Studio' = t('Android_Studio_icon.svg')
+  Eclipse = t()
+  'IntelliJ IDEA' = t()
+  'NetBeans' = t('apache-netbeans')
   'Visual Studio Code' = t()
   'Vim' = t()
+  // ==== CI:
+  'CircleCI' = t()
+  'Jenkins' = t('jenkins-icon')
 }
 
 export class Project_Management_Tools {
   'Agile Central' = t()
-  'Bugzilla' = t()
+  'Bugzilla' = tNoIcon()
   'JTrac' = t()
   'Trac' = t()
   'Redmine' = t()
   'TeamForge' = t({
     organisation: 'CollabNet',
   })
-  'Jira' = t()
+  'Jira' = tWide()
   'YouTrack' = t({
     organisation: 'JetBrains',
   })
 }
 
 export class Graphics {
-  // TODO FIGma, inkscape, Affinity Designer, GIMP
+  // TODO inkscape, Affinity Designer, GIMP, Sketch
   SVG = t({
     categories: 'Frontend',
   })
   Figma = t()
-
+  Blender = tWide()
+  'Adobe Illustrator' = t('Adobe_Illustrator_CC_icon.svg')
+  'Adobe Photoshop' = t('adobe--photoshop-32x32.svg')
+  'Adobe Creative Cloud' = t('adobe--creativecloud-32x32.svg')
+  'Affinity Designer' = t('affinity-designer.png')
+  'GIMP' = t('gimp-wilber-big.png')
+  'Inkscape' = t('inkscape-logo.svg')
 }
 
 export class Languages {
+  Java = t()
   Go = tNoIcon()
   TypeScript = t()
   Kotlin = t({
@@ -373,6 +392,9 @@ export class Version_Control {
     logo: 'github-icon',
     categories: 'ProjectManagementTools' /* secondary categories */,
   })
+  GitLab = t({
+    categories: 'ProjectManagementTools' /* secondary categories */,
+  })
   Subversion = t()
   'Plastic SCM' = t()
 
@@ -395,11 +417,13 @@ export class Other {
 
   RegExp = tNoIcon()
   'Java Swing' = t('java')
+  'Google Maps' = tNoIcon()
   // TODO: stuff like BugZilla, Trello, Agile Central
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
 
 export class AI {
+  TensorFlow = t()
   Keras = t/*Wide*/({
     logo: 'keras-logo-2018-large-1200.png',
     logoSize: [1200, 348],
