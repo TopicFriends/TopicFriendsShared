@@ -8,12 +8,17 @@
 
 <!--  <ng-template [ngIf]="! otherProfiles" >Loading external profiles...</ng-template>-->
 
+<ng-container
+  *ngFor="let descriptor of descriptorsList"
+>
   <app-other-profile-user-name
-    *ngFor="let descriptor of descriptorsList"
+    *ngIf="formControls[descriptor.id]; let value"
     [descriptor]="descriptor"
     [parentFormGroup]="formGroup"
-    [thisFormControl]="formControls[descriptor.id]"
+    [thisFormControl]="value"
   ></app-other-profile-user-name>
+
+</ng-container>
 <!--</div>-->
 
 <!--</mat-card-content>-->

@@ -56,26 +56,21 @@ function prepareDescriptorsList(descriptorsMap: UserOtherProfilesDescriptorsDefs
 export class UserOtherProfilesDescriptorsDefs {
   static array = prepareDescriptorsList(new UserOtherProfilesDescriptorsDefs())
 
-  TopicFriends = descriptor({
-    urlPrefix: 'TopicFriends.org/',
-    // iconClass: 'ion-social-twitter',
-  })
-  twitter = descriptor({
-    websiteName: 'Twitter',
-    urlPrefix: 'twitter.com/',
-    // iconClass: 'ion-social-twitter',
-  })
+  // TopicFriends = descriptor({
+  //   urlPrefix: 'TopicFriends.org/',
+  //   // iconClass: 'ion-social-twitter',
+  // })
   linkedIn = descriptor({
     websiteName: 'LinkedIn',
     urlPrefix: 'linkedin.com/in/',
     // iconClass: 'ion-social-linkedin',
     iconImg: 'assets/images/logos/linkedin-icon.svg',
   })
-  facebook = descriptor({
-    websiteName: 'Facebook',
-    urlPrefix: 'facebook.com/',
-    // iconClass: 'ion-social-facebook',
-  })
+  // facebook = descriptor({
+  //   websiteName: 'Facebook',
+  //   urlPrefix: 'facebook.com/',
+  //   // iconClass: 'ion-social-facebook',
+  // })
   gitHub = descriptor({
     websiteName: 'GitHub',
     urlPrefix: 'github.com/',
@@ -89,13 +84,19 @@ export class UserOtherProfilesDescriptorsDefs {
     whatIsEnough: 'user id and name',
     whatIsEnoughVerb: 'are',
   })
-  StackShare = descriptor({
-    // urlPrefix: 'https://stackshare.io/',
-    urlPrefix: 'stackshare.io/',
+  twitter = descriptor({
+    websiteName: 'Twitter',
+    urlPrefix: 'twitter.com/',
+    // iconClass: 'ion-social-twitter',
   })
-  AngelList = descriptor({
-    // urlPrefix: 'https://angel.co/',
-    urlPrefix: 'angel.co/',
-  })
+
+  // StackShare = descriptor({
+  //   // urlPrefix: 'https://stackshare.io/',
+  //   urlPrefix: 'stackshare.io/',
+  // })
+  // AngelList = descriptor({
+  //   // urlPrefix: 'https://angel.co/',
+  //   urlPrefix: 'angel.co/',
+  // })
 
 }
