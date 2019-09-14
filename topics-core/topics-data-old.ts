@@ -131,7 +131,6 @@ export const topicsOld = [
   'Sencha',
   tagLogoType('AWS'), 'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
   'GWT', 'Haskell', tagNoIcon('Elixir'), 'Erlang',
-  tagNoIcon('JetBrains MPS'),
   'Ansible',
   'Polymer', tag('Web Components', 'webcomponents'),
   tagNoIcon('Clarity Design System') /* https://vmware.github.io/clarity/ */ ,

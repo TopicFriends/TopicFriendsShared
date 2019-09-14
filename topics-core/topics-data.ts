@@ -233,7 +233,7 @@ export class Testing {
   Jasmine = t()
   JUnit = t({logo: 'junit-icon.png', logoSize: [125, 84]})
   TestNG = t({logo: 'testng.png', logoSize: [634, 176]})
-  // TODO: TestNG
+  Cucumber = t()
 }
 
 export class Tools {
@@ -251,15 +251,15 @@ export class Tools {
 }
 
 export class Project_Management_Tools {
-  'Agile Central' = t()
   'Bugzilla' = tNoIcon()
   'JTrac' = t()
   'Trac' = t()
   'Redmine' = t()
-  'TeamForge' = t({
+  'TeamForge' = tNoIcon({
     organisation: 'CollabNet',
   })
   'Jira' = tWide()
+  'Agile Central' = tNoIcon()
   'YouTrack' = t({
     organisation: 'JetBrains',
   })
@@ -281,6 +281,7 @@ export class Graphics {
 }
 
 export class Languages {
+  'JetBrains MPS' = tNoIcon()
   Java = t()
   Go = tNoIcon()
   TypeScript = t()
@@ -344,6 +345,7 @@ export class Mobile {
   })
   Capacitor = tWide('capacitor--logo-light.png', [256, 45]) // FIXME: remove (is in sub-topics of Ionic)
   Flutter = tWide()
+  'Java Micro Edition' = t('java')
 }
 
 export class Cloud {
@@ -352,7 +354,6 @@ export class Cloud {
       // most are from firebase console left navbar:
       'Authentication': t(),
       'Realtime Database': t('Firebase-realtime-database.svg'),
-      'Cloud Firestore': t('firebase-firestore.svg'),
       'Storage': t('Firebase-storage.svg'),
       'Hosting': t('Firebase-hosting.svg'),
       'Cloud Functions': t(),
@@ -362,6 +363,8 @@ export class Cloud {
       'Grow': t(),
     }
   })
+  'Cloud Firestore' = t('firebase-firestore.svg')
+
   GCP = t({
     logo: 'gcp.png',
     iconUrl: 'logo_gcp_hexagon_rgb.png'
@@ -407,6 +410,7 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
+  'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')
   'Travis CI' = t()
   '.NET' = t('dotnet.svg')
@@ -418,6 +422,7 @@ export class Other {
   RegExp = tNoIcon()
   'Java Swing' = t('java')
   'Google Maps' = tNoIcon()
+  'Gerrit' = tNoIcon()
   // TODO: stuff like BugZilla, Trello, Agile Central
   // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
 }
