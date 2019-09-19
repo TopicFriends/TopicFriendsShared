@@ -228,6 +228,7 @@ export class Frontend_And_Backend_App_Platforms {
 
 export class Testing {
   TestCafe = t()
+  Spock = tNoIcon()
   Jest = t()
   Karma = t()
   Jasmine = t()
@@ -281,7 +282,7 @@ export class Graphics {
 }
 
 export class Languages {
-  'JetBrains MPS' = tNoIcon()
+  'JetBrains MPS' = t()
   Java = t()
   Go = tNoIcon()
   TypeScript = t()

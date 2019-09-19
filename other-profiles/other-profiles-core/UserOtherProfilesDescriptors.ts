@@ -66,6 +66,11 @@ export class UserOtherProfilesDescriptorsDefs {
     // iconClass: 'ion-social-linkedin',
     iconImg: 'assets/images/logos/linkedin-icon.svg',
   })
+  XING = descriptor({
+    urlPrefix: 'xing.com/profile/',
+    // iconClass: 'ion-social-linkedin',
+    iconImg: 'assets/images/logos/xing-icon.svg',
+  })
   // facebook = descriptor({
   //   websiteName: 'Facebook',
   //   urlPrefix: 'facebook.com/',

@@ -10,6 +10,7 @@ export class UserOtherProfiles {
   twitter?: OtherProfile;
   facebook?: OtherProfile;
   website?: OtherProfile;
+  XING?: OtherProfile;
 
   // Phone number(s)/whatsapp
   // telegram (phone(s)?)
