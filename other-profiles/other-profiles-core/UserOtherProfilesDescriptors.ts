@@ -56,10 +56,12 @@ function prepareDescriptorsList(descriptorsMap: UserOtherProfilesDescriptorsDefs
 export class UserOtherProfilesDescriptorsDefs {
   static array = prepareDescriptorsList(new UserOtherProfilesDescriptorsDefs())
 
-  // TopicFriends = descriptor({
-  //   urlPrefix: 'TopicFriends.org/',
-  //   // iconClass: 'ion-social-twitter',
-  // })
+  TopicFriends = descriptor({
+    websiteName: 'TopicFriends',
+    urlPrefix: 'TopicFriends.org/',
+    // iconClass: 'ion-social-twitter',
+    iconImg: 'assets/images/clients/TopicFriends.svg',
+  })
   linkedIn = descriptor({
     websiteName: 'LinkedIn',
     urlPrefix: 'linkedin.com/in/',
