@@ -145,7 +145,7 @@ export class Frontend {
   })
   Stencil = tWide()
   'Vue.js' = t({logo: 'vue'})
-
+  'Svelte' = t()
 
 
   Lodash = t()
@@ -201,7 +201,7 @@ export class Backend {
       'https://stackoverflow.com/questions/tagged/express',
       'https://stackshare.io/expressjs',
       'https://twitter.com/expressjs',
-      // TOOD: 'https://alternativeto.net/software/expressjs/',
+      // TODO: 'https://alternativeto.net/software/expressjs/',
     )
   })
 
@@ -210,6 +210,9 @@ export class Backend {
       'http://keystonejs.com/'
     ),
   })
+
+  Spring = t()
+  'Spring Boot' = t()
 
   Hibernate = t()
   Docker = tWide()
@@ -244,6 +247,7 @@ export class Tools {
   Eclipse = t()
   'IntelliJ IDEA' = t()
   'NetBeans' = t('apache-netbeans')
+  'Visual Studio' = t()
   'Visual Studio Code' = t()
   'Vim' = t()
   // ==== CI:
