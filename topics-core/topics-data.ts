@@ -205,6 +205,9 @@ export class Backend {
     )
   })
 
+  'Deno' = t()
+
+
   KeystoneJS = t({
     urls: new TopicUrls(
       'http://keystonejs.com/'
@@ -218,7 +221,7 @@ export class Backend {
   Docker = tWide()
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t()
-  nginx = tWide()
+  NGINX = tWide()
 }
 
 
@@ -238,6 +241,9 @@ export class Testing {
   JUnit = t({logo: 'junit-icon.png', logoSize: [125, 84]})
   TestNG = t({logo: 'testng.png', logoSize: [634, 176]})
   Cucumber = t()
+  Calabash = tNoIcon()
+  Cobertura = tNoIcon()
+  Mockito = tNoIcon()
 }
 
 export class Tools {
@@ -252,11 +258,14 @@ export class Tools {
   'Vim' = t()
   // ==== CI:
   'CircleCI' = t()
+  'Travis CI' = t()
   'Jenkins' = t('jenkins-icon')
 }
 
 export class Project_Management_Tools {
+  'Pivotal Tracker' = t(`pivotal_tracker.svg`)
   'Bugzilla' = tNoIcon()
+  'Trello' = t()
   'JTrac' = t()
   'Trac' = t()
   'Redmine' = t()
@@ -271,7 +280,6 @@ export class Project_Management_Tools {
 }
 
 export class Graphics {
-  // TODO inkscape, Affinity Designer, GIMP, Sketch
   SVG = t({
     categories: 'Frontend',
   })
@@ -281,6 +289,7 @@ export class Graphics {
   'Adobe Photoshop' = t('adobe--photoshop-32x32.svg')
   'Adobe Creative Cloud' = t('adobe--creativecloud-32x32.svg')
   'Affinity Designer' = t('affinity-designer.png')
+  'Gravit Designer' = t('gravitio-icon.svg')
   'GIMP' = t('gimp-wilber-big.png')
   'Inkscape' = t('inkscape-logo.svg')
 }
@@ -351,6 +360,7 @@ export class Mobile {
   Capacitor = tWide('capacitor--logo-light.png', [256, 45]) // FIXME: remove (is in sub-topics of Ionic)
   Flutter = tWide()
   'Java Micro Edition' = t('java')
+  'BlackBerry' = tNoIcon()
 }
 
 export class Cloud {
@@ -403,6 +413,7 @@ export class Version_Control {
   GitLab = t({
     categories: 'ProjectManagementTools' /* secondary categories */,
   })
+  'Gerrit' = tNoIcon()
   Subversion = t()
   'Plastic SCM' = t()
 
@@ -415,9 +426,9 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
+  'Meetup' = tWide(`meetup-seeklogo.com.svg`)
   'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')
-  'Travis CI' = t()
   '.NET' = t('dotnet.svg')
   'NET.smth' = t('dotnet.svg') // for testing dot
   // 'test' = t('dotnet.svg')
@@ -427,9 +438,40 @@ export class Other {
   RegExp = tNoIcon()
   'Java Swing' = t('java')
   'Google Maps' = tNoIcon()
-  'Gerrit' = tNoIcon()
-  // TODO: stuff like BugZilla, Trello, Agile Central
-  // TODO: groups (here or in experience), like FrontEnd, BackEnd, Languages, Other
+  Guice = tNoIcon()
+  SOAP = tNoIcon()
+  XML = tNoIcon()
+  'XML Schema' = tNoIcon()
+  BiPRO = tNoIcon()
+  PDF = tNoIcon()
+  iText = tNoIcon()
+  JAXB = tNoIcon()
+  'Customer Support' = t('user-solid.svg')
+  'Agile' = t('project-diagram-solid.svg')
+  'Scrum' = t('project-diagram-solid.svg')
+  'ALM - Application Lifecycle Management' = t('project-diagram-solid.svg')
+  'Algorithms' = t('project-diagram-solid.svg')
+  'Data Structures' = t('project-diagram-solid.svg')
+  'OOP - Object Oriented Programming' = t('project-diagram-solid.svg')
+  'SOLID Principles' = t('project-diagram-solid.svg')
+  'FP - Functional Programming' = t('project-diagram-solid.svg')
+  'Design Patterns' = t('project-diagram-solid.svg')
+  'Software Architecture' = t('project-diagram-solid.svg')
+  // TODO: UML
+  'Refactoring' = t('project-diagram-solid.svg')
+  'TDD - Test-Driven Development' = t('project-diagram-solid.svg')
+  'BDD - Behavior-Driven Development' = t('project-diagram-solid.svg')
+  'DSL - Domain-Specific Languages' = t('project-diagram-solid.svg')
+  'Antipatterns' = t('project-diagram-solid.svg')
+  'Making Presentations' = t('project-diagram-solid.svg')
+  'Leadership' = t('project-diagram-solid.svg')
+  'Performance Optimization' = t('project-diagram-solid.svg')
+  'Performance Profiling' = t('project-diagram-solid.svg')
+  'UX - User Experience' = t('project-diagram-solid.svg')
+  'Troubleshooting' = t('project-diagram-solid.svg')
+  'Graphic Design' = t('project-diagram-solid.svg')
+  'Testing' = t('project-diagram-solid.svg')
+  // TODO: google docs
 }
 
 export class AI {
