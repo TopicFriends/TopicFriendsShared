@@ -183,6 +183,7 @@ export class Backend {
     logo: 'nodejs.svg',
     logoSmallIcon: 'nodejs-icon.svg',
   })
+  'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
 
   'Express.js' = tWide({
     logo: 'express.svg',
