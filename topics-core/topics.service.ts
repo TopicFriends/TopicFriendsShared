@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { errorAlert } from '../../utils/utils';
 import {
   Topic,
 } from './Topic';
@@ -42,7 +43,7 @@ export class TopicsService {
     if ( ! topic ) {
       // FIXME: handle unknown topics (no icon, add some suffix like "(Unknown)", warn on console; for TopicFriends, if older version displays data from newer version
       // console.log('getTopicById', this.topics)
-      throw new Error('getTopicById failed for topicIdOrName ' + topicIdOrName)
+      errorAlert('getTopicById failed for topicIdOrName ' + topicIdOrName)
       // console.log(topicsArray)
     }
     return topic
