@@ -157,7 +157,7 @@ export const topicsOld = [
   tagNoIcon('Functional Programming'), tag('EC2', 'aws-ec2'),
   tag('G Suite'),
   'CocoaPods',
-  tagLogoType('ArangoDB'),
+  // tagLogoType('ArangoDB'),
   'Auth0',
   'Mapbox',
   'OData', tagNoIcon('PowerBI'), tagNoIcon('SignalR'), // Mark S.

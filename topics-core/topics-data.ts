@@ -222,6 +222,7 @@ export class Backend {
   Docker = tWide()
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t()
+  ArangoDB = tWide()
   NGINX = tWide()
 }
 
@@ -460,6 +461,7 @@ export class Other {
   'Software Architecture' = t('project-diagram-solid.svg')
   // TODO: UML
   'Refactoring' = t('project-diagram-solid.svg')
+  'Code Review' = t('project-diagram-solid.svg')
   'TDD - Test-Driven Development' = t('project-diagram-solid.svg')
   'BDD - Behavior-Driven Development' = t('project-diagram-solid.svg')
   'DSL - Domain-Specific Languages' = t('project-diagram-solid.svg')
