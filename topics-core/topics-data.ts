@@ -1,5 +1,3 @@
-//
-
 import {
   getDictionaryValuesAsArray,
   setIdsFromKeys,
@@ -110,7 +108,7 @@ export class Frontend {
       'Lazy Loading': t(),
       'i18n': t(),
       'HTTP': t(),
-      'Angular Universal': t()
+      'Angular Universal': t(),
     }
   })
   Codelyzer = t()
@@ -129,6 +127,7 @@ export class Frontend {
   })
 
   Ionic = tWide({
+    /* logos: https://ionicframework.com/press */
     urls: new TopicUrls(
       'https://ionicframework.com/',
       'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
@@ -165,6 +164,9 @@ export class Frontend {
   'Font Awesome' = t('fort-awesome-alt-brands.svg')
   Workbox = tWide('Workbox-Logo-Grey.svg')
   'SVG.js' = t('svg-js.png' /* WTF, PNG for an SVG lib :D */)
+  'Storybook' = t('storybook-icon.svg' /* WTF, PNG for an SVG lib :D */)
+  'DDD - Domain-Driven Design' = t('project-diagram-solid.svg')
+  // TODO Scully
 }
 
 export class JavaScript {
@@ -219,11 +221,11 @@ export class Backend {
   'Spring Boot' = t()
 
   Hibernate = t()
-  Docker = tWide()
+  Docker = t()
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t()
-  ArangoDB = tWide()
   NGINX = tWide()
+  'Ruby On Rails' = t()
 }
 
 
@@ -236,6 +238,7 @@ export class Frontend_And_Backend_App_Platforms {
 
 export class Testing {
   TestCafe = t()
+  Cypress = t(`cypress-io-logo-round-flat.svg`)
   Spock = tNoIcon()
   Jest = t()
   Karma = t()
@@ -249,7 +252,7 @@ export class Testing {
 }
 
 export class Tools {
-  WebStorm = t()
+  WebStorm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
   RubyMine = t()
   'Android Studio' = t('Android_Studio_icon.svg')
   Eclipse = t()
@@ -299,14 +302,14 @@ export class Graphics {
 export class Languages {
   'JetBrains MPS' = t()
   Java = t()
-  Go = tNoIcon()
+  Go = tWide('go-logo-blue.svg')
   TypeScript = t()
   Kotlin = t({
     categories: 'Mobile',
   })
   Swift = t()
   Ruby = t()
-  'Ruby On Rails' = t()
+  Markdown = t()
 
   Python = t({
     urls: new TopicUrls(
@@ -340,7 +343,7 @@ export class Languages {
 export class OS {
   Linux = t('tux.svg')
   'Ubuntu Linux' = t('ubuntu.svg')
-  'SUSE Linux' = t('suse.svg')
+  'SUSE Linux' = tWide('suse.svg')
   'RedHat Linux' = t('redhat.svg')
   'CentOS Linux' = tWide('centos.svg')
   'Debian Linux' = t('debian.svg')
@@ -359,8 +362,9 @@ export class Mobile {
       'Recycler View': tNoIcon({}),
     }
   })
-  Capacitor = tWide('capacitor--logo-light.png', [256, 45]) // FIXME: remove (is in sub-topics of Ionic)
+  Capacitor = t(`capacitor-icon.svg`) // FIXME: remove (is in sub-topics of Ionic)
   Flutter = tWide()
+  NativeScript = t()
   'Java Micro Edition' = t('java')
   'BlackBerry' = tNoIcon()
 }
@@ -382,8 +386,8 @@ export class Cloud {
   })
   'Cloud Firestore' = t('firebase-firestore.svg')
 
-  GCP = t({
-    logo: 'gcp.png',
+  'GCP - Google Cloud Platform' = t({
+    logo: 'gcp-google-cloud-platform-logo.svg',
     iconUrl: 'logo_gcp_hexagon_rgb.png'
   })
   Algolia = tWide()
@@ -391,12 +395,14 @@ export class Cloud {
 
 export class Databases {
   MongoDB = tWide()
+  ArangoDB = tWide()
   Mongoose = tNoIcon()
   GraphQL = t()
   NoSQL = tNoIcon()
   PostgreSQL = t()
   MySQL = t()
   Oracle = tWide()
+  IndexedDB = tNoIcon()
   // TODO: sqlite
 }
 
@@ -457,6 +463,7 @@ export class Other {
   'OOP - Object Oriented Programming' = t('project-diagram-solid.svg')
   'SOLID Principles' = t('project-diagram-solid.svg')
   'FP - Functional Programming' = t('project-diagram-solid.svg')
+  'AOP - Aspect-Oriented Programming' = t('project-diagram-solid.svg')
   'Design Patterns' = t('project-diagram-solid.svg')
   'Software Architecture' = t('project-diagram-solid.svg')
   // TODO: UML
@@ -491,6 +498,7 @@ export class Build_Systems_And_Package_Managers {
   Maven = tWide()
   Yarn = t()
   NPM = tWide()
+  Bazel = t(`bazel-icon.svg`)
 }
 
 export function processTopics<T>(inputTopics: T/*: Topics*/): T {
