@@ -173,7 +173,7 @@ export const topicsOld = [
   tagNoIcon('Frontend'),
   tagNoIcon('Telerik UI'),
   tagNoIcon('Kendo UI'),
-  'NativeScript',
+  // 'NativeScript',
   // tagNoIcon('SOAP'),
   tagNoIcon('Microsoft SQL Server'),
   tagNoIcon('Microsoft Excel'),
@@ -182,7 +182,7 @@ export const topicsOld = [
   // tagNoIcon('Testing'),
   tagNoIcon('Quality Assurance'),
   tagNoIcon('Quality Engineering'),
-  'Markdown',
+  // 'Markdown',
   tagNoIcon('English Language'), tagNoIcon('Spanish Language'),
   tagNoIcon('French Language'), tagNoIcon('Portuguese Language'), tagNoIcon('German Language'),
   tagNoIcon('Italian Language'), tagNoIcon('Polish Language'),
@@ -390,7 +390,7 @@ export const topicsOld = [
 
   // NestJS: https://nestjs.com/ A progressive Node.js framework for building efficient and scalable server-side applications on top of TypeScript & JavaScript (ES6 / ES7 / ES8) heavily inspired by Angular 😻🚀
 
-  // CI: Continous Integration, CD: Continuous Delivery
+  // CI: Continuous Integration, CD: Continuous Delivery
   // RethinkDB
   tagNoIcon('Web Animations API'),
 
@@ -399,6 +399,6 @@ export const topicsOld = [
   tagNoIcon('StackBlitz'),
   tagNoIcon('Java Server Faces (JSF)'),
   'Marionette',
-  tagNoIcon('Cypress' /* From David Atencia GitHub repo :) */)
+  // tagNoIcon('Cypress')
   // TODO: Cassandra
 ]
