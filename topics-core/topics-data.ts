@@ -164,9 +164,23 @@ export class Frontend {
   'Font Awesome' = t('fort-awesome-alt-brands.svg')
   Workbox = tWide('Workbox-Logo-Grey.svg')
   'SVG.js' = t('svg-js.png' /* WTF, PNG for an SVG lib :D */)
-  'Storybook' = t('storybook-icon.svg' /* WTF, PNG for an SVG lib :D */)
+  'Storybook' = t('storybook-icon.svg')
   'DDD - Domain-Driven Design' = t('project-diagram-solid.svg')
   // TODO Scully
+  Lighthouse = t('google--lighthouse-logo.svg' /*
+    https://developers.google.com/web/tools/lighthouse
+    https://developers.google.com/web/tools/lighthouse/images/lighthouse-logo.svg*/
+  )
+  'three.js' = tNoIcon(/*
+    https://threejs.org/
+    pressKit: https://github.com/mrdoob/three.js/issues/2789
+
+   */)
+  'WebGL' = tWide('WebGL_RGB_June16.svg',
+    /* pressKit: https://www.khronos.org/legal/trademarks/
+     logoFile: https://www.khronos.org/assets/utilities/retrieveFile.php?d=webgl&t=logopacks*/
+  )
+
 }
 
 export class JavaScript {
