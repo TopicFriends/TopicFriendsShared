@@ -180,6 +180,13 @@ export class Frontend {
     /* pressKit: https://www.khronos.org/legal/trademarks/
      logoFile: https://www.khronos.org/assets/utilities/retrieveFile.php?d=webgl&t=logopacks*/
   )
+  'glTF' = tWide('GlTF_Official_Logo.svg',
+    /* pressKit: https://www.khronos.org/legal/trademarks/
+     logoFile: https://www.khronos.org/assets/utilities/retrieveFile.php?d=gltf&t=logopacks
+     https://upload.wikimedia.org/wikipedia/en/d/dd/GlTF_Official_Logo.svg
+     https://www.khronos.org/assets/images/api_logos/gltf.svg
+     */
+  )
 
 }
 
