@@ -464,7 +464,7 @@ export class Other {
 
   ReactiveX = t()
 
-  RegExp = tNoIcon()
+  RegExp = t('_icon_hammer-solid.svg')
   'Java Swing' = t('java')
   'Google Maps' = tNoIcon()
   Guice = tNoIcon()
@@ -488,7 +488,7 @@ export class Other {
   'Design Patterns' = t('project-diagram-solid.svg')
   'Software Architecture' = t('project-diagram-solid.svg')
   // TODO: UML
-  'Refactoring' = t('project-diagram-solid.svg')
+  'Refactoring' = t('_icon_hammer-solid.svg')
   'Code Review' = t('project-diagram-solid.svg')
   'TDD - Test-Driven Development' = t('project-diagram-solid.svg')
   'BDD - Behavior-Driven Development' = t('project-diagram-solid.svg')
