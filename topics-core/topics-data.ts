@@ -25,7 +25,7 @@ function coerceLogoToTopicData(topicData: TopicDataOrLogo): TopicData {
   return topicData
 }
 
-export function t(topicData?: TopicDataOrLogo) {
+export function t(topicData?: TopicDataOrLogo, iconWebsiteTodo?: string | string[]) {
   topicData = coerceLogoToTopicData(topicData)
   const topic = Object.create(Topic.prototype)
   Object.assign(topic, topicData)
@@ -264,7 +264,7 @@ export class Testing {
   Jest = t()
   Karma = t()
   Jasmine = t()
-  JUnit = t({logo: 'junit-icon.png', logoSize: [125, 84]})
+  JUnit = t({logo: 'Junit.fe42161b-ugly.svg', logoSize: [125, 84], iconUrl: `https://zebrunner.com/`})
   TestNG = t({logo: 'testng.png', logoSize: [634, 176]})
   Cucumber = t()
   Calabash = tNoIcon()
@@ -358,7 +358,8 @@ export class Languages {
   })
   Bash = t()
   Lua = t()
-  D = tNoIcon()
+  D = t('d', 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg')
+  Julia = t('julia-dots', ['https://github.com/JuliaLang/julia-logo-graphics/tree/master/images', 'https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia-logo-color.svg'])
 }
 
 export class OS {
@@ -459,6 +460,7 @@ export class Other {
   'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')
   '.NET' = t('dotnet.svg')
+  'Blazor' = t('blazor.svg', ['https://worldvectorlogo.com/logo/blazor', 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor'])
   'NET.smth' = t('dotnet.svg') // for testing dot
   // 'test' = t('dotnet.svg')
 
