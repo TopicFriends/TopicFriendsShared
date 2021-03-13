@@ -178,7 +178,6 @@ export const topicsOld = [
   tagNoIcon('Microsoft SQL Server'),
   tagNoIcon('Microsoft Excel'),
   tagNoIcon('Microsoft Word'),
-  tagNoIcon('Microservices'),
   // tagNoIcon('Testing'),
   tagNoIcon('Quality Assurance'),
   tagNoIcon('Quality Engineering'),

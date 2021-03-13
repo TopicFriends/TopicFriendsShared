@@ -187,7 +187,7 @@ export class Frontend {
      https://www.khronos.org/assets/images/api_logos/gltf.svg
      */
   )
-
+  'Micro Frontends' = tNoIcon(/* https://martinfowler.com/articles/micro-frontends.html */)
 }
 
 export class JavaScript {
@@ -202,6 +202,9 @@ export class Java {
 }
 
 export class Backend {
+  // TODO: hapi fastify apollo-server koa
+  'Microservices' = tNoIcon()
+
   'Node.js' = tWide({
     logo: 'nodejs.svg',
     logoSmallIcon: 'nodejs-icon.svg',
