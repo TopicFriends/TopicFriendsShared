@@ -155,6 +155,8 @@ export class Frontend {
   NgRx = t()
   NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
   React = t()
+  Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
+  // TODO: Chakra
   Ember = tWide()
   Redux = t()
   WebSocket = t()
@@ -203,6 +205,7 @@ export class Java {
 
 export class Backend {
   // TODO: hapi fastify apollo-server koa
+  // TODO: type-graphql, typeORM
   'Microservices' = tNoIcon()
 
   'Node.js' = tWide({
@@ -210,6 +213,7 @@ export class Backend {
     logoSmallIcon: 'nodejs-icon.svg',
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
+  GraphQL = t()
 
   'Express.js' = tWide({
     logo: 'express.svg',
@@ -289,6 +293,8 @@ export class Tools {
   'CircleCI' = t()
   'Travis CI' = t()
   'Jenkins' = t('jenkins-icon')
+  'Zeplin' = t()
+  'Slack' = t()
 }
 
 export class Project_Management_Tools {
@@ -302,6 +308,8 @@ export class Project_Management_Tools {
     organisation: 'CollabNet',
   })
   'Jira' = tWide()
+  // TODO: Clubhouse
+  // TODO: Monday.com
   'Agile Central' = tNoIcon()
   'YouTrack' = t({
     organisation: 'JetBrains',
@@ -422,7 +430,7 @@ export class Databases {
   MongoDB = tWide()
   ArangoDB = tWide()
   Mongoose = tNoIcon()
-  GraphQL = t()
+  // TODO
   NoSQL = tNoIcon()
   PostgreSQL = t()
   MySQL = t()
