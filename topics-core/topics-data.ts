@@ -207,6 +207,8 @@ export class Backend {
   // TODO: hapi fastify apollo-server koa
   // TODO: type-graphql, typeORM
   'Microservices' = tNoIcon()
+  'TypeORM' = tNoIcon()
+  'TypeGraphQL' = t(`typegraphql-icon.svg` /* https://github.com/MichalLytek/type-graphql/issues/824 */)
 
   'Node.js' = tWide({
     logo: 'nodejs.svg',
@@ -467,6 +469,7 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
+  'YouTube' = t()
   'Meetup' = tWide(`meetup-seeklogo.com.svg`)
   'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')

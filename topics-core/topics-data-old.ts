@@ -253,7 +253,6 @@ export const topicsOld = [
   tagNoIcon('Augmented Reality'),
   tagNoIcon('Photography'),
   tagNoIcon('Video Editing'),
-  tagNoIcon('YouTube'),
   tagNoIcon('Explainer Videos'),
   tagNoIcon('Geomarketing'),
   tagNoIcon('LAMP Stack'),
