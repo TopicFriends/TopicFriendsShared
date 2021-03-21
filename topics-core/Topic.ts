@@ -107,8 +107,8 @@ export class Topic {
 
   public getLogoPath(iconFileName: string) {
     // return '../../../assets/images/logos/' + iconFileName.toLowerCase() + '-icon.svg'
-    return '../../../assets/images/logos/' + iconFileName
-    // return '../../../assets/images/logos-l/logos/' + iconFileName
+    // return '../../../assets/images/logos/' + iconFileName
+    return '../../../assets/images/logos-l/logos/' + iconFileName
   }
 
   private getLogoFileName(tag: string) {

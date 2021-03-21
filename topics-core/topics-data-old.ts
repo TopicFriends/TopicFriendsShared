@@ -129,7 +129,7 @@ export const topicsOld = [
   'Kinto',
   'KickStarter',
   'Sencha',
-  tagLogoType('AWS'), 'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
+  'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
   'GWT', 'Haskell', tagNoIcon('Elixir'), 'Erlang',
   'Ansible',
   'Polymer', tag('Web Components', 'webcomponents'),

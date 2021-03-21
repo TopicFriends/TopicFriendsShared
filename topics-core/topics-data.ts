@@ -426,6 +426,7 @@ export class Cloud {
     iconUrl: 'logo_gcp_hexagon_rgb.png'
   })
   Algolia = tWide()
+  AWS = t()
 }
 
 export class Databases {
@@ -470,6 +471,7 @@ export class Version_Control {
 */
 export class Other {
   'YouTube' = t()
+  'Payoneer' = tWide()
   'Meetup' = tWide(`meetup-seeklogo.com.svg`)
   'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')
