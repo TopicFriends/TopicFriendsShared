@@ -373,6 +373,7 @@ export class Languages {
   Lua = t()
   D = t('d', 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg')
   Julia = t('julia-dots', ['https://github.com/JuliaLang/julia-logo-graphics/tree/master/images', 'https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia-logo-color.svg'])
+  // TODO: PHP & Hack lang, HHVM
 }
 
 export class OS {
@@ -470,6 +471,7 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
+  'Mailgun' = t()
   'YouTube' = t()
   'Payoneer' = tWide()
   'Meetup' = tWide(`meetup-seeklogo.com.svg`)
