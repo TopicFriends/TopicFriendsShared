@@ -264,7 +264,7 @@ export const topicsOld = [
   tagNoIcon('Economy'),
   tagNoIcon('Economics'),
   tagNoIcon('Underscore_Test'),
-  tag('R Language', 'r-lang'),
+  // tag('R Language', 'r-lang'),
   'Struts',
   'Yammer',
   tagNoIcon('Office 365'),
