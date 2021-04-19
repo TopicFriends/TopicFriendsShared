@@ -148,6 +148,9 @@ export class Frontend {
 
 
   Lodash = t()
+  'TypeDI' = tNoIcon() // TODO move to Frontend & Backend / JavaScript / TypeScript
+  'TypeStack' = tNoIcon()
+
   Bootstrap = t()
   jQuery = tWide()
   'AG Grid' = tWide('ag-grid')
@@ -209,8 +212,6 @@ export class Backend {
   // TODO: type-graphql, typeORM
   'Microservices' = tNoIcon()
   'TypeORM' = tNoIcon()
-  'TypeDI' = tNoIcon()
-  'TypeStack' = tNoIcon()
   'TypeGraphQL' = t(`typegraphql-icon.svg` /* https://github.com/MichalLytek/type-graphql/issues/824 */)
 
   'Node.js' = tWide({
@@ -373,6 +374,8 @@ export class Languages {
     categories: "Frontend",
     ecosystem: "JavaScript",
   })
+  AssemblyScript = t()
+
   Bash = t()
   Lua = t()
   'R Language' = t('r-lang.svg')
