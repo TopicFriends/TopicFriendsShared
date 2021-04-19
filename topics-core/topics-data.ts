@@ -158,6 +158,7 @@ export class Frontend {
   AngularFire = tNoIcon()
   NgRx = t()
   NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
+  MobX = t()
   React = t()
   Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
   // TODO: Chakra
