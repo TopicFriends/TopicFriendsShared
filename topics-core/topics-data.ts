@@ -209,6 +209,8 @@ export class Backend {
   // TODO: type-graphql, typeORM
   'Microservices' = tNoIcon()
   'TypeORM' = tNoIcon()
+  'TypeDI' = tNoIcon()
+  'TypeStack' = tNoIcon()
   'TypeGraphQL' = t(`typegraphql-icon.svg` /* https://github.com/MichalLytek/type-graphql/issues/824 */)
 
   'Node.js' = tWide({
@@ -480,7 +482,7 @@ export class Other {
   'Mailgun' = t()
   'YouTube' = t()
   'Spotify' = t()
-  'AudioSalad' = tNoIcon()
+  'AudioSalad' = t(`audiosalad-traced.svg`)
   'WorldFirst' = tNoIcon()
   'Payoneer' = tWide()
   'PayPal' = t()
