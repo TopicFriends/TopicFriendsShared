@@ -302,6 +302,7 @@ export class Tools {
   'Jenkins' = t('jenkins-icon')
   'Zeplin' = t()
   'Slack' = t()
+  'Netlify' = t()
 }
 
 export class Project_Management_Tools {
@@ -510,6 +511,7 @@ export class Other {
   XML = tNoIcon()
   'XML Schema' = tNoIcon()
   BiPRO = tNoIcon()
+  DDEX = tNoIcon()
   PDF = tNoIcon()
   iText = tNoIcon()
   JAXB = tNoIcon()
