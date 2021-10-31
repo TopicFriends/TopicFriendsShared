@@ -41,16 +41,16 @@ export const topicsOld = [
       null,
       'https://twitter.com/primefaces'
     )),
-  tag('PHP', 'php', null, [],
-    new TopicUrls(
-      'http://www.php.net/',
-      'https://en.wikipedia.org/wiki/PHP',
-      'https://github.com/php',
-      'https://www.npmjs.com/search?q=php&page=1&ranking=popularity',
-      'https://stackoverflow.com/questions/tagged/php',
-      'https://stackshare.io/php',
-      'https://twitter.com/php_net'
-    )),
+  // tag('PHP', 'php', null, [],
+  //   new TopicUrls(
+  //     'http://www.php.net/',
+  //     'https://en.wikipedia.org/wiki/PHP',
+  //     'https://github.com/php',
+  //     'https://www.npmjs.com/search?q=php&page=1&ranking=popularity',
+  //     'https://stackoverflow.com/questions/tagged/php',
+  //     'https://stackshare.io/php',
+  //     'https://twitter.com/php_net'
+  //   )),
   materialDesign,
   tag('Django', 'django', null, [],
     new TopicUrls(
@@ -103,10 +103,10 @@ export const topicsOld = [
     'https://github.com/swagger-api/swagger-core/releases',
     'https://npm.runkit.com/swagger',
   )),
-  'Bitcoin', 'Ethereum', 'Steemit', 'Monero',
+  'Steemit', 'Monero',
   tagNoIcon('Cryptocurrency'), tagNoIcon('Blockchain'), tagNoIcon('Cryptography'),
   // TODO: segregated witness (SegWit)
-  'Cordova', 'PhoneGap',
+  // /*'Cordova'*/ 'PhoneGap',
   tagNoIcon('Game Design'),
   tagNoIcon('Game Development'),
   tagNoIcon('Geolocation'),
@@ -132,7 +132,7 @@ export const topicsOld = [
   'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
   'GWT', 'Haskell', tagNoIcon('Elixir'), 'Erlang',
   'Ansible',
-  'Polymer', tag('Web Components', 'webcomponents'),
+  'Polymer',
   tagNoIcon('Clarity Design System') /* https://vmware.github.io/clarity/ */ ,
   'ng-bootstrap',
   'Capistrano', 'Chef', 'Puppet',

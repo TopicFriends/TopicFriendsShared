@@ -58,6 +58,9 @@ export class Frontend {
   'Stylus' = tWide()
   'Less' = tWide()
   'Sass' = t()
+  // TODO: https://www.pollen.style/
+  // TODO: alpine.js (added logo svg)
+  // TODO: Lit elements (Moi)
 
   PouchDB = t({categories: 'Databases'})
   PrimeNG = t({
@@ -79,6 +82,7 @@ export class Frontend {
     iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
   })
   xplat = tWide('xplat-logo.png', [899, 393])
+  'Web Components' = t('webcomponents')
   WebPack = t()
   Angular = t({
     urls: new TopicUrls(
@@ -350,6 +354,7 @@ export class Languages {
   })
   Swift = t()
   Ruby = t()
+  Crystal = t()
   Markdown = t()
 
   Python = t({
@@ -381,11 +386,14 @@ export class Languages {
   Bash = t()
   Lua = t()
   'R Language' = t('r-lang.svg')
+  'V Language' = t('v-logo.svg')
+  // 'Nim Language': https://nim-lang.org/,
   'D Language' = t('d', 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg')
   Julia = tWide('julia_programming_language_logo.svg', /*{
     logo: ,
     iconWebsite: ['https://github.com/JuliaLang/julia-logo-graphics/tree/master/images', 'https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia-logo-color.svg'],
   }*/)
+  PHP = t() // tWide()
   // TODO: PHP & Hack lang, HHVM
 }
 
@@ -412,8 +420,10 @@ export class Mobile {
     }
   })
   Capacitor = t(`capacitor-icon.svg`) // FIXME: remove (is in sub-topics of Ionic)
-  Flutter = tWide()
+  Cordova = t()
+  PhoneGap = t()
   NativeScript = t()
+  Flutter = tWide()
   'Java Micro Edition' = t('java')
   'BlackBerry' = tNoIcon()
 }
@@ -498,7 +508,7 @@ export class Other {
   'WordPress' = t('wordpress-icon.svg')
   '.NET' = t('dotnet.svg')
   'Blazor' = t('blazor.svg', ['https://worldvectorlogo.com/logo/blazor', 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor'])
-  'NET.smth' = t('dotnet.svg') // for testing dot
+  // 'NET.smth' = t('dotnet.svg') // for testing dot
   // 'test' = t('dotnet.svg')
 
   ReactiveX = t()
@@ -545,13 +555,18 @@ export class Other {
   // TODO: google docs
 }
 
+export class Crypto {
+  Bitcoin = t()
+  Ethereum = t()
+}
+
 export class AI {
   TensorFlow = t()
-  Keras = t/*Wide*/({
+  Keras = t/*Wide*/('Keras_logo.svg'/*{
     logo: 'keras-logo-2018-large-1200.png',
     logoSize: [1200, 348],
     logoSmallIcon: 'keras-logo-small.jpg',
-  })
+  }*/)
 }
 
 export class Build_Systems_And_Package_Managers {
@@ -582,7 +597,7 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 export type Topics =
   Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
   Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers &
-  AI
+  AI & Crypto
 
 function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5) {
   return Object.assign({}, Object.create(t1 as any), Object.create(t2 as any), Object.create(t3 as any), Object.create(t4 as any), Object.create(t5 as any));
@@ -624,6 +639,7 @@ export const topicCategoriesArray = [
   new TopicCategory('Build Systems and package managers', new Build_Systems_And_Package_Managers()),
   new TopicCategory('AI', new AI()),
   new TopicCategory('Other', new Other()),
+  new TopicCategory('Crypto', new Crypto()),
 ]
 
 export const topics: Topics = processTopics(
