@@ -1,5 +1,3 @@
-//
-
 import {
   getDictionaryValuesAsArray,
   setIdsFromKeys,
@@ -27,7 +25,7 @@ function coerceLogoToTopicData(topicData: TopicDataOrLogo): TopicData {
   return topicData
 }
 
-export function t(topicData?: TopicDataOrLogo) {
+export function t(topicData?: TopicDataOrLogo, iconWebsiteTodo?: string | string[]) {
   topicData = coerceLogoToTopicData(topicData)
   const topic = Object.create(Topic.prototype)
   Object.assign(topic, topicData)
@@ -59,7 +57,10 @@ export class Frontend {
   'Chart.js' = t({logo: "chart-js.svg" /* non-standard svg*/})
   'Stylus' = tWide()
   'Less' = tWide()
-  'Sass' = t()
+  'Sass' = tWide()
+  // TODO: https://www.pollen.style/
+  // TODO: alpine.js (added logo svg)
+  // TODO: Lit elements (Moi)
 
   PouchDB = t({categories: 'Databases'})
   PrimeNG = t({
@@ -81,6 +82,7 @@ export class Frontend {
     iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
   })
   xplat = tWide('xplat-logo.png', [899, 393])
+  'Web Components' = tWide('webcomponents')
   WebPack = t()
   Angular = t({
     urls: new TopicUrls(
@@ -110,7 +112,7 @@ export class Frontend {
       'Lazy Loading': t(),
       'i18n': t(),
       'HTTP': t(),
-      'Angular Universal': t()
+      'Angular Universal': t(),
     }
   })
   Codelyzer = t()
@@ -129,6 +131,7 @@ export class Frontend {
   })
 
   Ionic = tWide({
+    /* logos: https://ionicframework.com/press */
     urls: new TopicUrls(
       'https://ionicframework.com/',
       'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
@@ -149,13 +152,20 @@ export class Frontend {
 
 
   Lodash = t()
+  'TypeDI' = tNoIcon() // TODO move to Frontend & Backend / JavaScript / TypeScript
+  'TypeStack' = tNoIcon()
+
   Bootstrap = t()
   jQuery = tWide()
-  'ag-Grid' = tWide()
+  'AG Grid' = tWide('ag-grid')
+  'ApexCharts.js' = tNoIcon()
   AngularFire = tNoIcon()
   NgRx = t()
   NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
+  MobX = t()
   React = t()
+  Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
+  // TODO: Chakra
   Ember = tWide()
   Redux = t()
   WebSocket = t()
@@ -165,6 +175,30 @@ export class Frontend {
   'Font Awesome' = t('fort-awesome-alt-brands.svg')
   Workbox = tWide('Workbox-Logo-Grey.svg')
   'SVG.js' = t('svg-js.png' /* WTF, PNG for an SVG lib :D */)
+  'Storybook' = t('storybook-icon.svg')
+  'DDD - Domain-Driven Design' = t('project-diagram-solid.svg')
+  // TODO Scully
+  Lighthouse = t('google--lighthouse-logo.svg' /*
+    https://developers.google.com/web/tools/lighthouse
+    https://developers.google.com/web/tools/lighthouse/images/lighthouse-logo.svg*/
+  )
+  'three.js' = tNoIcon(/*
+    https://threejs.org/
+    pressKit: https://github.com/mrdoob/three.js/issues/2789
+
+   */)
+  'WebGL' = tWide('webgl-cropped.svg',
+    /* pressKit: https://www.khronos.org/legal/trademarks/
+     logoFile: https://www.khronos.org/assets/utilities/retrieveFile.php?d=webgl&t=logopacks*/
+  )
+  'glTF' = tWide({logo: 'GlTF_Official_Logo.svg', /*logoSize: [1250, 1168]*/ }
+    /* pressKit: https://www.khronos.org/legal/trademarks/
+     logoFile: https://www.khronos.org/assets/utilities/retrieveFile.php?d=gltf&t=logopacks
+     https://upload.wikimedia.org/wikipedia/en/d/dd/GlTF_Official_Logo.svg
+     https://www.khronos.org/assets/images/api_logos/gltf.svg
+     */
+  )
+  'Micro Frontends' = tNoIcon(/* https://martinfowler.com/articles/micro-frontends.html */)
 }
 
 export class JavaScript {
@@ -179,11 +213,18 @@ export class Java {
 }
 
 export class Backend {
+  // TODO: hapi fastify apollo-server koa
+  // TODO: type-graphql, typeORM
+  'Microservices' = tNoIcon()
+  'TypeORM' = tNoIcon()
+  'TypeGraphQL' = t(`typegraphql-icon.svg` /* https://github.com/MichalLytek/type-graphql/issues/824 */)
+
   'Node.js' = tWide({
     logo: 'nodejs.svg',
     logoSmallIcon: 'nodejs-icon.svg',
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
+  GraphQL = t()
 
   'Express.js' = tWide({
     logo: 'express.svg',
@@ -219,11 +260,11 @@ export class Backend {
   'Spring Boot' = t()
 
   Hibernate = t()
-  Docker = tWide()
+  Docker = t()
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t()
-  ArangoDB = tWide()
   NGINX = tWide()
+  'Ruby On Rails' = t()
 }
 
 
@@ -236,11 +277,12 @@ export class Frontend_And_Backend_App_Platforms {
 
 export class Testing {
   TestCafe = t()
+  Cypress = t(`cypress-io-logo-round-flat.svg`)
   Spock = tNoIcon()
   Jest = t()
   Karma = t()
   Jasmine = t()
-  JUnit = t({logo: 'junit-icon.png', logoSize: [125, 84]})
+  JUnit = t({logo: 'Junit.fe42161b-ugly.svg', logoSize: [125, 84], iconUrl: `https://zebrunner.com/`})
   TestNG = t({logo: 'testng.png', logoSize: [634, 176]})
   Cucumber = t()
   Calabash = tNoIcon()
@@ -249,7 +291,7 @@ export class Testing {
 }
 
 export class Tools {
-  WebStorm = t()
+  WebStorm = t(/* https://www.jetbrains.com/de-de/company/brand/logos/ */)
   RubyMine = t()
   'Android Studio' = t('Android_Studio_icon.svg')
   Eclipse = t()
@@ -262,6 +304,9 @@ export class Tools {
   'CircleCI' = t()
   'Travis CI' = t()
   'Jenkins' = t('jenkins-icon')
+  'Zeplin' = t()
+  'Slack' = t()
+  'Netlify' = t()
 }
 
 export class Project_Management_Tools {
@@ -275,6 +320,8 @@ export class Project_Management_Tools {
     organisation: 'CollabNet',
   })
   'Jira' = tWide()
+  // TODO: Clubhouse
+  // TODO: Monday.com
   'Agile Central' = tNoIcon()
   'YouTrack' = t({
     organisation: 'JetBrains',
@@ -283,9 +330,11 @@ export class Project_Management_Tools {
 
 export class Graphics {
   SVG = t({
+    logo: 'svg-logo-v.svg',
     categories: 'Frontend',
   })
   Figma = t()
+  InVision = t()
   Blender = tWide()
   'Adobe Illustrator' = t('Adobe_Illustrator_CC_icon.svg')
   'Adobe Photoshop' = t('adobe--photoshop-32x32.svg')
@@ -299,14 +348,15 @@ export class Graphics {
 export class Languages {
   'JetBrains MPS' = t()
   Java = t()
-  Go = tNoIcon()
+  Go = tWide('go-logo-blue.svg')
   TypeScript = t()
   Kotlin = t({
     categories: 'Mobile',
   })
   Swift = t()
   Ruby = t()
-  'Ruby On Rails' = t()
+  Crystal = t()
+  Markdown = t()
 
   Python = t({
     urls: new TopicUrls(
@@ -332,15 +382,26 @@ export class Languages {
     categories: "Frontend",
     ecosystem: "JavaScript",
   })
+  AssemblyScript = t()
+
   Bash = t()
   Lua = t()
-  D = tNoIcon()
+  'R Language' = t('r-lang.svg')
+  'V Language' = t('v-logo.svg')
+  // 'Nim Language': https://nim-lang.org/,
+  'D Language' = t('d', 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg')
+  Julia = tWide('julia_programming_language_logo.svg', /*{
+    logo: ,
+    iconWebsite: ['https://github.com/JuliaLang/julia-logo-graphics/tree/master/images', 'https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia-logo-color.svg'],
+  }*/)
+  PHP = t() // tWide()
+  // TODO: PHP & Hack lang, HHVM
 }
 
 export class OS {
   Linux = t('tux.svg')
   'Ubuntu Linux' = t('ubuntu.svg')
-  'SUSE Linux' = t('suse.svg')
+  'SUSE Linux' = tWide('suse.svg')
   'RedHat Linux' = t('redhat.svg')
   'CentOS Linux' = tWide('centos.svg')
   'Debian Linux' = t('debian.svg')
@@ -359,8 +420,11 @@ export class Mobile {
       'Recycler View': tNoIcon({}),
     }
   })
-  Capacitor = tWide('capacitor--logo-light.png', [256, 45]) // FIXME: remove (is in sub-topics of Ionic)
-  Flutter = tWide()
+  Capacitor = t(`capacitor-icon.svg`) // FIXME: remove (is in sub-topics of Ionic)
+  Cordova = t()
+  PhoneGap = t()
+  NativeScript = t()
+  Flutter = tWide('flutter-cropped.svg')
   'Java Micro Edition' = t('java')
   'BlackBerry' = tNoIcon()
 }
@@ -382,21 +446,24 @@ export class Cloud {
   })
   'Cloud Firestore' = t('firebase-firestore.svg')
 
-  GCP = t({
-    logo: 'gcp.png',
+  'GCP - Google Cloud Platform' = t({
+    logo: 'gcp-google-cloud-platform-logo.svg',
     iconUrl: 'logo_gcp_hexagon_rgb.png'
   })
   Algolia = tWide()
+  AWS = t()
 }
 
 export class Databases {
   MongoDB = tWide()
+  ArangoDB = tWide()
   Mongoose = tNoIcon()
-  GraphQL = t()
+  // TODO
   NoSQL = tNoIcon()
   PostgreSQL = t()
   MySQL = t()
   Oracle = tWide()
+  IndexedDB = tNoIcon()
   // TODO: sqlite
 }
 
@@ -428,16 +495,26 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
+  'Mailgun' = t()
+  'YouTube' = t()
+  'Spotify' = t()
+  'AudioSalad' = t(`audiosalad-traced.svg`)
+  'WorldFirst' = tNoIcon()
+  'Payoneer' = tWide()
+  'PayPal' = t()
+  'TransferWise' = tNoIcon()
+  'Axios' = tNoIcon()
   'Meetup' = tWide(`meetup-seeklogo.com.svg`)
   'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')
   '.NET' = t('dotnet.svg')
-  'NET.smth' = t('dotnet.svg') // for testing dot
+  'Blazor' = t('blazor.svg', ['https://worldvectorlogo.com/logo/blazor', 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor'])
+  // 'NET.smth' = t('dotnet.svg') // for testing dot
   // 'test' = t('dotnet.svg')
 
   ReactiveX = t()
 
-  RegExp = tNoIcon()
+  RegExp = t('_icon_hammer-solid.svg')
   'Java Swing' = t('java')
   'Google Maps' = tNoIcon()
   Guice = tNoIcon()
@@ -445,6 +522,7 @@ export class Other {
   XML = tNoIcon()
   'XML Schema' = tNoIcon()
   BiPRO = tNoIcon()
+  DDEX = tNoIcon()
   PDF = tNoIcon()
   iText = tNoIcon()
   JAXB = tNoIcon()
@@ -457,10 +535,11 @@ export class Other {
   'OOP - Object Oriented Programming' = t('project-diagram-solid.svg')
   'SOLID Principles' = t('project-diagram-solid.svg')
   'FP - Functional Programming' = t('project-diagram-solid.svg')
+  'AOP - Aspect-Oriented Programming' = t('project-diagram-solid.svg')
   'Design Patterns' = t('project-diagram-solid.svg')
   'Software Architecture' = t('project-diagram-solid.svg')
   // TODO: UML
-  'Refactoring' = t('project-diagram-solid.svg')
+  'Refactoring' = t('_icon_hammer-solid.svg')
   'Code Review' = t('project-diagram-solid.svg')
   'TDD - Test-Driven Development' = t('project-diagram-solid.svg')
   'BDD - Behavior-Driven Development' = t('project-diagram-solid.svg')
@@ -477,13 +556,19 @@ export class Other {
   // TODO: google docs
 }
 
+export class Crypto {
+  Bitcoin = t()
+  Ethereum = t()
+}
+
 export class AI {
   TensorFlow = t()
-  Keras = t/*Wide*/({
+  Keras = t/*Wide*/('keras.svg'/*{
+    https://github.com/valohai/ml-logos/blob/master/keras.svg
     logo: 'keras-logo-2018-large-1200.png',
     logoSize: [1200, 348],
     logoSmallIcon: 'keras-logo-small.jpg',
-  })
+  }*/)
 }
 
 export class Build_Systems_And_Package_Managers {
@@ -491,6 +576,23 @@ export class Build_Systems_And_Package_Managers {
   Maven = tWide()
   Yarn = t()
   NPM = tWide()
+  Bazel = t(`bazel-icon.svg`)
+}
+
+export class FunAndSports {
+  Volleyball = t(`generic/fun/volleyball-ball-solid.svg`)
+  'Interpersonal Networking' = t('generic/users-solid.svg')
+  'Hiking' = t('generic/fun/hiking-solid')
+  Outdoors = t('generic/fun/cloud-sun-solid.svg')
+  Nature = t('generic/fun/tree-solid.svg')
+  'Car trips' = t('generic/fun/car-solid')
+  'Bicycle' = tWide('generic/fun/bicycle-solid')
+  'Table Tennis' = t('generic/fun/table-tennis-solid.svg') /* search terms: ping pong */
+  Padel = t('generic/fun/tennis-ball-svgrepo-com.svg')/* search terms: paddle paddel */
+  Swimming = t('generic/fun/swimmer-solid')
+  Chess = t('generic/fun/chess-solid.svg')
+  'Business' = t('generic/business--chart-line')
+  'Psychology' = t('generic/brain-solid')
 }
 
 export function processTopics<T>(inputTopics: T/*: Topics*/): T {
@@ -513,7 +615,7 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 export type Topics =
   Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
   Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers &
-  AI
+  AI & Crypto & FunAndSports
 
 function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5) {
   return Object.assign({}, Object.create(t1 as any), Object.create(t2 as any), Object.create(t3 as any), Object.create(t4 as any), Object.create(t5 as any));
@@ -555,6 +657,8 @@ export const topicCategoriesArray = [
   new TopicCategory('Build Systems and package managers', new Build_Systems_And_Package_Managers()),
   new TopicCategory('AI', new AI()),
   new TopicCategory('Other', new Other()),
+  new TopicCategory('Crypto', new Crypto()),
+  new TopicCategory('Fun and Sports', new FunAndSports()),
 ]
 
 export const topics: Topics = processTopics(

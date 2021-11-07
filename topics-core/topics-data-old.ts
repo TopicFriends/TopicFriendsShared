@@ -41,16 +41,16 @@ export const topicsOld = [
       null,
       'https://twitter.com/primefaces'
     )),
-  tag('PHP', 'php', null, [],
-    new TopicUrls(
-      'http://www.php.net/',
-      'https://en.wikipedia.org/wiki/PHP',
-      'https://github.com/php',
-      'https://www.npmjs.com/search?q=php&page=1&ranking=popularity',
-      'https://stackoverflow.com/questions/tagged/php',
-      'https://stackshare.io/php',
-      'https://twitter.com/php_net'
-    )),
+  // tag('PHP', 'php', null, [],
+  //   new TopicUrls(
+  //     'http://www.php.net/',
+  //     'https://en.wikipedia.org/wiki/PHP',
+  //     'https://github.com/php',
+  //     'https://www.npmjs.com/search?q=php&page=1&ranking=popularity',
+  //     'https://stackoverflow.com/questions/tagged/php',
+  //     'https://stackshare.io/php',
+  //     'https://twitter.com/php_net'
+  //   )),
   materialDesign,
   tag('Django', 'django', null, [],
     new TopicUrls(
@@ -75,7 +75,7 @@ export const topicsOld = [
   'JavaScript', tag('ECMAScript', 'es6'),
   'Elm', tag('.NET Core', null),
   tagNoIcon('Akka'),
-  /*tagLogoType('Ember'),*/ /*'React'*//*, 'Redux',*/ 'MobX', tagNoIcon('React Native'), 'Xamarin', tagNoIcon('Xamarin.Forms'),
+  /*tagLogoType('Ember'),*/ /*'React'*//*, 'Redux',*/ tagNoIcon('React Native'), 'Xamarin', tagNoIcon('Xamarin.Forms'),
   /*tag('TensorFlow', 'tensorflow'),*/ 'OpenCV',
   'Appium', tagNoIcon('Robotium'),
   'Laravel', 'CakePHP', 'Zend Framework', 'CodeIgniter', 'Symfony',
@@ -103,10 +103,10 @@ export const topicsOld = [
     'https://github.com/swagger-api/swagger-core/releases',
     'https://npm.runkit.com/swagger',
   )),
-  'Bitcoin', 'Ethereum', 'Steemit', 'Monero',
+  'Steemit', 'Monero',
   tagNoIcon('Cryptocurrency'), tagNoIcon('Blockchain'), tagNoIcon('Cryptography'),
   // TODO: segregated witness (SegWit)
-  'Cordova', 'PhoneGap',
+  // /*'Cordova'*/ 'PhoneGap',
   tagNoIcon('Game Design'),
   tagNoIcon('Game Development'),
   tagNoIcon('Geolocation'),
@@ -129,10 +129,10 @@ export const topicsOld = [
   'Kinto',
   'KickStarter',
   'Sencha',
-  tagLogoType('AWS'), 'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
+  'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
   'GWT', 'Haskell', tagNoIcon('Elixir'), 'Erlang',
   'Ansible',
-  'Polymer', tag('Web Components', 'webcomponents'),
+  'Polymer',
   tagNoIcon('Clarity Design System') /* https://vmware.github.io/clarity/ */ ,
   'ng-bootstrap',
   'Capistrano', 'Chef', 'Puppet',
@@ -173,16 +173,15 @@ export const topicsOld = [
   tagNoIcon('Frontend'),
   tagNoIcon('Telerik UI'),
   tagNoIcon('Kendo UI'),
-  'NativeScript',
+  // 'NativeScript',
   // tagNoIcon('SOAP'),
   tagNoIcon('Microsoft SQL Server'),
   tagNoIcon('Microsoft Excel'),
   tagNoIcon('Microsoft Word'),
-  tagNoIcon('Microservices'),
   // tagNoIcon('Testing'),
   tagNoIcon('Quality Assurance'),
   tagNoIcon('Quality Engineering'),
-  'Markdown',
+  // 'Markdown',
   tagNoIcon('English Language'), tagNoIcon('Spanish Language'),
   tagNoIcon('French Language'), tagNoIcon('Portuguese Language'), tagNoIcon('German Language'),
   tagNoIcon('Italian Language'), tagNoIcon('Polish Language'),
@@ -193,7 +192,7 @@ export const topicsOld = [
   tagNoIcon('Web Design'),
   tagNoIcon('Web Analytics'),
 
-  tag('Business').setLogo('business--chart-line').setRelated(
+  // tag('Business').setLogo('business--chart-line').setRelated(
     tagNoIcon('Venture Capital').setLogo('business--chart-line'),
     tagNoIcon('Seed Funding').setLogo('business--chart-line'),
     tagNoIcon('Angel Investment').setLogo('business--chart-line'),
@@ -225,7 +224,7 @@ export const topicsOld = [
     tagNoIcon('Sales').setLogo('business--chart-line'),
     tagNoIcon('Logistics').setLogo('business--chart-line'),
     tagNoIcon('Supply Chain').setLogo('business--chart-line'),
-  ),
+  // ),
 
   tagNoIcon('Mobile apps'),
   tagNoIcon('Neuroscience'),
@@ -254,7 +253,6 @@ export const topicsOld = [
   tagNoIcon('Augmented Reality'),
   tagNoIcon('Photography'),
   tagNoIcon('Video Editing'),
-  tagNoIcon('YouTube'),
   tagNoIcon('Explainer Videos'),
   tagNoIcon('Geomarketing'),
   tagNoIcon('LAMP Stack'),
@@ -266,7 +264,7 @@ export const topicsOld = [
   tagNoIcon('Economy'),
   tagNoIcon('Economics'),
   tagNoIcon('Underscore_Test'),
-  tag('R Language', 'r-lang'),
+  // tag('R Language', 'r-lang'),
   'Struts',
   'Yammer',
   tagNoIcon('Office 365'),
@@ -323,7 +321,7 @@ export const topicsOld = [
   tag('NATS', null, 'https://nats.io/'),
   // tag('', null, ''),
 
-  //, Green Tech, IoT, IoE
+  // , Green Tech, IoT, IoE
   // web3, Truffle Framework, Distributed Ledger Technology, Attention Economy, Ethlance, Steem,
   // remix, mist, DApp, DAO, TheDao
   // Smart contracts, Solidity, Private coin,
@@ -390,15 +388,15 @@ export const topicsOld = [
 
   // NestJS: https://nestjs.com/ A progressive Node.js framework for building efficient and scalable server-side applications on top of TypeScript & JavaScript (ES6 / ES7 / ES8) heavily inspired by Angular 😻🚀
 
-  // CI: Continous Integration, CD: Continuous Delivery
+  // CI: Continuous Integration, CD: Continuous Delivery
   // RethinkDB
   tagNoIcon('Web Animations API'),
 
   tagNoIcon('Electronic Voting'), tagNoIcon('Activism'), tagNoIcon('Volunteering'),
-  tagNoIcon('Psychology'),
+  // tagNoIcon('Psychology'),
   tagNoIcon('StackBlitz'),
   tagNoIcon('Java Server Faces (JSF)'),
   'Marionette',
-  tagNoIcon('Cypress' /* From David Atencia GitHub repo :) */)
+  // tagNoIcon('Cypress')
   // TODO: Cassandra
 ]
