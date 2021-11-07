@@ -45,7 +45,7 @@ export class Topic {
     public shortName?: string,
     public logoTypeWide?: boolean,
     // just to match types for now:
-    public iconWebsite?: string,
+    public iconWebsite?: string | string[],
     public iconUrl?: string,
     public subTopics?: any,
     public organisation?: any,
@@ -107,7 +107,8 @@ export class Topic {
 
   public getLogoPath(iconFileName: string) {
     // return '../../../assets/images/logos/' + iconFileName.toLowerCase() + '-icon.svg'
-    return '../../../assets/images/logos/' + iconFileName
+    // return '../../../assets/images/logos/' + iconFileName
+    return '../../../assets/images/logos-l/logos/' + iconFileName
   }
 
   private getLogoFileName(tag: string) {
