@@ -91,18 +91,18 @@ export const topicsOld = [
     'https://twitter.com/senecajs',
     null
   )),
-  tag('Swagger', 'swagger', null, [], new TopicUrls(
-    'https://swagger.io/',
-    'https://en.wikipedia.org/wiki/Swagger_(software)',
-    'https://github.com/swagger-api/swagger-core',
-    'https://www.npmjs.com/package/swagger',
-    'https://stackoverflow.com/questions/tagged/swagger',
-    'https://stackshare.io/swagger-ui' /* not really swagger itself */,
-    'https://twitter.com/swaggerapi',
-    'https://alternativeto.net/software/swagger-io',
-    'https://github.com/swagger-api/swagger-core/releases',
-    'https://npm.runkit.com/swagger',
-  )),
+  // tag('Swagger', 'swagger', null, [], new TopicUrls(
+  //   'https://swagger.io/',
+  //   'https://en.wikipedia.org/wiki/Swagger_(software)',
+  //   'https://github.com/swagger-api/swagger-core',
+  //   'https://www.npmjs.com/package/swagger',
+  //   'https://stackoverflow.com/questions/tagged/swagger',
+  //   'https://stackshare.io/swagger-ui' /* not really swagger itself */,
+  //   'https://twitter.com/swaggerapi',
+  //   'https://alternativeto.net/software/swagger-io',
+  //   'https://github.com/swagger-api/swagger-core/releases',
+  //   'https://npm.runkit.com/swagger',
+  // )),
   'Steemit', 'Monero',
   tagNoIcon('Cryptocurrency'), tagNoIcon('Blockchain'), tagNoIcon('Cryptography'),
   // TODO: segregated witness (SegWit)
@@ -192,7 +192,7 @@ export const topicsOld = [
   tagNoIcon('Web Design'),
   tagNoIcon('Web Analytics'),
 
-  tag('Business').setLogo('business--chart-line').setRelated(
+  // tag('Business').setLogo('business--chart-line').setRelated(
     tagNoIcon('Venture Capital').setLogo('business--chart-line'),
     tagNoIcon('Seed Funding').setLogo('business--chart-line'),
     tagNoIcon('Angel Investment').setLogo('business--chart-line'),
@@ -224,7 +224,7 @@ export const topicsOld = [
     tagNoIcon('Sales').setLogo('business--chart-line'),
     tagNoIcon('Logistics').setLogo('business--chart-line'),
     tagNoIcon('Supply Chain').setLogo('business--chart-line'),
-  ),
+  // ),
 
   tagNoIcon('Mobile apps'),
   tagNoIcon('Neuroscience'),
@@ -321,7 +321,7 @@ export const topicsOld = [
   tag('NATS', null, 'https://nats.io/'),
   // tag('', null, ''),
 
-  //, Green Tech, IoT, IoE
+  // , Green Tech, IoT, IoE
   // web3, Truffle Framework, Distributed Ledger Technology, Attention Economy, Ethlance, Steem,
   // remix, mist, DApp, DAO, TheDao
   // Smart contracts, Solidity, Private coin,
@@ -393,7 +393,7 @@ export const topicsOld = [
   tagNoIcon('Web Animations API'),
 
   tagNoIcon('Electronic Voting'), tagNoIcon('Activism'), tagNoIcon('Volunteering'),
-  tagNoIcon('Psychology'),
+  // tagNoIcon('Psychology'),
   tagNoIcon('StackBlitz'),
   tagNoIcon('Java Server Faces (JSF)'),
   'Marionette',

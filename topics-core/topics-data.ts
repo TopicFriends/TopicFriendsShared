@@ -57,7 +57,7 @@ export class Frontend {
   'Chart.js' = t({logo: "chart-js.svg" /* non-standard svg*/})
   'Stylus' = tWide()
   'Less' = tWide()
-  'Sass' = t()
+  'Sass' = tWide()
   // TODO: https://www.pollen.style/
   // TODO: alpine.js (added logo svg)
   // TODO: Lit elements (Moi)
@@ -82,7 +82,7 @@ export class Frontend {
     iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
   })
   xplat = tWide('xplat-logo.png', [899, 393])
-  'Web Components' = t('webcomponents')
+  'Web Components' = tWide('webcomponents')
   WebPack = t()
   Angular = t({
     urls: new TopicUrls(
@@ -187,11 +187,11 @@ export class Frontend {
     pressKit: https://github.com/mrdoob/three.js/issues/2789
 
    */)
-  'WebGL' = tWide('WebGL_RGB_June16.svg',
+  'WebGL' = tWide('webgl-cropped.svg',
     /* pressKit: https://www.khronos.org/legal/trademarks/
      logoFile: https://www.khronos.org/assets/utilities/retrieveFile.php?d=webgl&t=logopacks*/
   )
-  'glTF' = tWide('GlTF_Official_Logo.svg',
+  'glTF' = tWide({logo: 'GlTF_Official_Logo.svg', /*logoSize: [1250, 1168]*/ }
     /* pressKit: https://www.khronos.org/legal/trademarks/
      logoFile: https://www.khronos.org/assets/utilities/retrieveFile.php?d=gltf&t=logopacks
      https://upload.wikimedia.org/wikipedia/en/d/dd/GlTF_Official_Logo.svg
@@ -225,6 +225,7 @@ export class Backend {
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
   GraphQL = t()
+  Swagger = t()
 
   'Express.js' = tWide({
     logo: 'express.svg',
@@ -330,6 +331,7 @@ export class Project_Management_Tools {
 
 export class Graphics {
   SVG = t({
+    logo: 'svg-logo-v.svg',
     categories: 'Frontend',
   })
   Figma = t()
@@ -347,7 +349,7 @@ export class Graphics {
 export class Languages {
   'JetBrains MPS' = t()
   Java = t()
-  Go = tWide('go-logo-blue.svg')
+  Go = tWide('go-logo-white.svg')
   TypeScript = t()
   Kotlin = t({
     categories: 'Mobile',
@@ -388,12 +390,12 @@ export class Languages {
   'R Language' = t('r-lang.svg')
   'V Language' = t('v-logo.svg')
   // 'Nim Language': https://nim-lang.org/,
-  'D Language' = t('d', 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg')
+  'D Language' = tWide('dlang-simple'/*, 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg'*/)
   Julia = tWide('julia_programming_language_logo.svg', /*{
     logo: ,
     iconWebsite: ['https://github.com/JuliaLang/julia-logo-graphics/tree/master/images', 'https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia-logo-color.svg'],
   }*/)
-  PHP = t() // tWide()
+  PHP = tWide()
   // TODO: PHP & Hack lang, HHVM
 }
 
@@ -423,7 +425,7 @@ export class Mobile {
   Cordova = t()
   PhoneGap = t()
   NativeScript = t()
-  Flutter = tWide()
+  Flutter = tWide('flutter-cropped.svg')
   'Java Micro Edition' = t('java')
   'BlackBerry' = tNoIcon()
 }
@@ -562,7 +564,8 @@ export class Crypto {
 
 export class AI {
   TensorFlow = t()
-  Keras = t/*Wide*/('Keras_logo.svg'/*{
+  Keras = t/*Wide*/('keras.svg'/*{
+    https://github.com/valohai/ml-logos/blob/master/keras.svg
     logo: 'keras-logo-2018-large-1200.png',
     logoSize: [1200, 348],
     logoSmallIcon: 'keras-logo-small.jpg',
@@ -575,6 +578,22 @@ export class Build_Systems_And_Package_Managers {
   Yarn = t()
   NPM = tWide()
   Bazel = t(`bazel-icon.svg`)
+}
+
+export class FunAndSports {
+  Volleyball = t(`generic/fun/volleyball-ball-solid.svg`)
+  'Interpersonal Networking' = t('generic/users-solid.svg')
+  'Hiking' = t('generic/fun/hiking-solid')
+  Outdoors = t('generic/fun/cloud-sun-solid.svg')
+  Nature = t('generic/fun/tree-solid.svg')
+  'Car trips' = t('generic/fun/car-solid')
+  'Bicycle' = tWide('generic/fun/bicycle-solid')
+  'Table Tennis' = t('generic/fun/table-tennis-solid.svg') /* search terms: ping pong */
+  Padel = t('generic/fun/tennis-ball-svgrepo-com.svg')/* search terms: paddle paddel */
+  Swimming = t('generic/fun/swimmer-solid-wide.svg')
+  Chess = t('generic/fun/chess-solid.svg')
+  'Business' = t('generic/business--chart-line')
+  'Psychology' = t('generic/brain-solid')
 }
 
 export function processTopics<T>(inputTopics: T/*: Topics*/): T {
@@ -597,7 +616,7 @@ export function processTopics<T>(inputTopics: T/*: Topics*/): T {
 export type Topics =
   Frontend & Frontend_And_Backend_App_Platforms & Backend & Other & Testing & Tools & Languages & OS & Mobile & Cloud &
   Project_Management_Tools & Graphics & Version_Control & Databases & Java & JavaScript & Build_Systems_And_Package_Managers &
-  AI & Crypto
+  AI & Crypto & FunAndSports
 
 function mergeTopics<T1, T2, T3, T4, T5>(t1: T1, t2: T2, t3: T3, t4: T4, t5?: T5) {
   return Object.assign({}, Object.create(t1 as any), Object.create(t2 as any), Object.create(t3 as any), Object.create(t4 as any), Object.create(t5 as any));
@@ -640,6 +659,7 @@ export const topicCategoriesArray = [
   new TopicCategory('AI', new AI()),
   new TopicCategory('Other', new Other()),
   new TopicCategory('Crypto', new Crypto()),
+  new TopicCategory('Fun and Sports', new FunAndSports()),
 ]
 
 export const topics: Topics = processTopics(
