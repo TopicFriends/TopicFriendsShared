@@ -225,6 +225,7 @@ export class Backend {
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
   GraphQL = t()
+  Swagger = t()
 
   'Express.js' = tWide({
     logo: 'express.svg',
@@ -260,9 +261,9 @@ export class Backend {
   'Spring Boot' = t()
 
   Hibernate = t()
-  Docker = t()
+  Docker = tWide('docker-simple'/* https://www.docker.com/company/newsroom/media-resources */)
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
-  ElasticSearch = t()
+  ElasticSearch = t(/* https://www.elastic.co/brand */)
   NGINX = tWide()
   'Ruby On Rails' = t()
 }
@@ -348,7 +349,7 @@ export class Graphics {
 export class Languages {
   'JetBrains MPS' = t()
   Java = t()
-  Go = tWide('go-logo-blue.svg')
+  Go = tWide('go-logo-white.svg')
   TypeScript = t()
   Kotlin = t({
     categories: 'Mobile',
@@ -386,16 +387,19 @@ export class Languages {
 
   Bash = t()
   Lua = t()
+  OCaml = tWide(/* https://ocaml.org/docs/logos.html  http://ocaml.org/logo/Colour/SVG/colour-logo.svg
+      Square -- https://ocaml.org/img/OCaml_Sticker.svg */)
   'R Language' = t('r-lang.svg')
   'V Language' = t('v-logo.svg')
   // 'Nim Language': https://nim-lang.org/,
-  'D Language' = t('d', 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg')
+  'D Language' = tWide('dlang-simple'/*, 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg'*/)
   Julia = tWide('julia_programming_language_logo.svg', /*{
     logo: ,
     iconWebsite: ['https://github.com/JuliaLang/julia-logo-graphics/tree/master/images', 'https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia-logo-color.svg'],
   }*/)
-  PHP = t() // tWide()
+  PHP = tWide()
   // TODO: PHP & Hack lang, HHVM
+  Haskell = t()
 }
 
 export class OS {
@@ -449,6 +453,7 @@ export class Cloud {
   'GCP - Google Cloud Platform' = t({
     logo: 'gcp-google-cloud-platform-logo.svg',
     iconUrl: 'logo_gcp_hexagon_rgb.png'
+    /* logos SVG-s: https://googlecloudcheatsheet.withgoogle.com/ */
   })
   Algolia = tWide()
   AWS = t()
@@ -559,7 +564,10 @@ export class Other {
 export class Crypto {
   Bitcoin = t()
   Ethereum = t()
+  "Web3" = t()
+  "web3.js" = t('web3js')
 }
+
 
 export class AI {
   TensorFlow = t()
@@ -580,7 +588,7 @@ export class Build_Systems_And_Package_Managers {
 }
 
 export class FunAndSports {
-  Volleyball = t(`generic/fun/volleyball-ball-solid.svg`)
+  Volleyball = t(`generic/fun/volleyball-ball-solid.svg`) /* TODO FIVB logo - cool*/ /* TODO: beach volleyball icon - net on the sand */
   'Interpersonal Networking' = t('generic/users-solid.svg')
   'Hiking' = t('generic/fun/hiking-solid')
   Outdoors = t('generic/fun/cloud-sun-solid.svg')
@@ -589,7 +597,7 @@ export class FunAndSports {
   'Bicycle' = tWide('generic/fun/bicycle-solid')
   'Table Tennis' = t('generic/fun/table-tennis-solid.svg') /* search terms: ping pong */
   Padel = t('generic/fun/tennis-ball-svgrepo-com.svg')/* search terms: paddle paddel */
-  Swimming = t('generic/fun/swimmer-solid')
+  Swimming = t('generic/fun/swimmer-solid-wide.svg')
   Chess = t('generic/fun/chess-solid.svg')
   'Business' = t('generic/business--chart-line')
   'Psychology' = t('generic/brain-solid')
