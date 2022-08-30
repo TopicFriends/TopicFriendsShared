@@ -76,9 +76,9 @@ export class Frontend {
       'https://twitter.com/prime_ng'
     )
   })
-  Nx = t({
+  Nx = tWide({
     logo: 'nx-logo-white.svg',
-    logoSize: [1048, 652], // FIXME
+    // logoSize: [1048, 652], // FIXME
     iconUrl: 'https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png',
   })
   xplat = tWide('xplat-logo.png', [899, 393])
@@ -130,8 +130,9 @@ export class Frontend {
     )
   })
 
-  Ionic = tWide({
+  Ionic = t({
     /* logos: https://ionicframework.com/press */
+    logo: 'ionic-icon.svg',
     urls: new TopicUrls(
       'https://ionicframework.com/',
       'https://en.wikipedia.org/wiki/Ionic_(mobile_app_framework)',
@@ -156,6 +157,8 @@ export class Frontend {
   'TypeStack' = tNoIcon()
 
   Bootstrap = t()
+  'React-Bootstrap' = t('react-bootstrap.svg')
+  "Material Design" = t('Google_Material_Design_Logo.svg')
   jQuery = tWide()
   'AG Grid' = tWide('ag-grid')
   'ApexCharts.js' = tNoIcon()
@@ -163,11 +166,15 @@ export class Frontend {
   NgRx = t()
   NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
   MobX = t()
+  "MobX-State-Tree" = t(`mobx-state-tree-logo.svg`
+    /* https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg */)
+  Redux = t()
+  "Redux Toolkit" = t(`redux--toolkit.svg`)
   React = t()
   Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
+  "Next.js" = t('nextjs-icon.svg')
   // TODO: Chakra
   Ember = tWide()
-  Redux = t()
   WebSocket = t()
   'Chrome Extensions' = t('chrome.svg')
   'Dexie.js' = t('dexie-js.svg')
@@ -218,12 +225,14 @@ export class Backend {
   'Microservices' = tNoIcon()
   'TypeORM' = tNoIcon()
   'TypeGraphQL' = t(`typegraphql-icon.svg` /* https://github.com/MichalLytek/type-graphql/issues/824 */)
+  'Apollo' = t(`apollostack.svg`)
 
   'Node.js' = tWide({
     logo: 'nodejs.svg',
     logoSmallIcon: 'nodejs-icon.svg',
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
+  'GraalVM' = tWide('graalvm-rgb-cropped.svg')
   GraphQL = t()
   Swagger = t()
 
@@ -262,6 +271,7 @@ export class Backend {
 
   Hibernate = t()
   Docker = tWide('docker-simple'/* https://www.docker.com/company/newsroom/media-resources */)
+  Terraform = t()
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t(/* https://www.elastic.co/brand */)
   NGINX = tWide()
@@ -371,6 +381,7 @@ export class Languages {
     )
   })
   Scala = t()
+  Clojure = t()
   Perl = t()
 
   C = t()
@@ -378,6 +389,7 @@ export class Languages {
   'C#' = t('c_sharp.svg')
   Dart = t()
   Groovy = tWide()
+  Elm = t()
   Rust = t()
   WebAssembly = t({
     categories: "Frontend",
@@ -386,20 +398,24 @@ export class Languages {
   AssemblyScript = t()
 
   Bash = t()
-  Lua = t()
-  OCaml = tWide(/* https://ocaml.org/docs/logos.html  http://ocaml.org/logo/Colour/SVG/colour-logo.svg
+  Lua = t('lua-no-text.svg')
+  Eiffel = tWide('eiffel-no-text.svg')
+  Erlang = tWide('erlang-no-text.svg')
+  Elixir = tWide('elixir-lang-icon.svg')
+  Haskell = t()
+  Lisp = tWide('lisp-logo.svg')
+  OCaml = tWide('ocaml-no-text.svg'/* https://ocaml.org/docs/logos.html  http://ocaml.org/logo/Colour/SVG/colour-logo.svg
       Square -- https://ocaml.org/img/OCaml_Sticker.svg */)
   'R Language' = t('r-lang.svg')
   'V Language' = t('v-logo.svg')
   // 'Nim Language': https://nim-lang.org/,
   'D Language' = tWide('dlang-simple'/*, 'https://en.wikipedia.org/wiki/File:D_Programming_Language_logo.svg'*/)
-  Julia = tWide('julia_programming_language_logo.svg', /*{
+  Julia = tWide('julia-dots-no-text.svg', /*{
     logo: ,
     iconWebsite: ['https://github.com/JuliaLang/julia-logo-graphics/tree/master/images', 'https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia-logo-color.svg'],
   }*/)
   PHP = tWide()
   // TODO: PHP & Hack lang, HHVM
-  Haskell = t()
 }
 
 export class OS {
@@ -456,7 +472,8 @@ export class Cloud {
     /* logos SVG-s: https://googlecloudcheatsheet.withgoogle.com/ */
   })
   Algolia = tWide()
-  AWS = t()
+  AWS = tWide()
+  "Microsoft Azure" = t('microsoft-azure')
 }
 
 export class Databases {
@@ -501,7 +518,8 @@ export class Version_Control {
 */
 export class Other {
   'Mailgun' = t()
-  'YouTube' = t()
+  'YouTube' = tWide()
+  'LinkedIn' = t('linkedin-icon')
   'Spotify' = t()
   'AudioSalad' = t(`audiosalad-traced.svg`)
   'WorldFirst' = tNoIcon()
@@ -510,14 +528,18 @@ export class Other {
   'TransferWise' = tNoIcon()
   'Axios' = tNoIcon()
   'Meetup' = tWide(`meetup-seeklogo.com.svg`)
+  'Wikipedia' = tWide(`generic/fun/wikipedia-w2.svg`)
   'Google Play' = t('google-play-icon')
   'WordPress' = t('wordpress-icon.svg')
-  '.NET' = t('dotnet.svg')
-  'Blazor' = t('blazor.svg', ['https://worldvectorlogo.com/logo/blazor', 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor'])
+  '.NET' = t('dotnet-logo-2020.svg', 'https://github.com/dotnet/brand/blob/main/logo/dotnet-logo.svg')
+  'Blazor' = tWide('blazor2.svg', /*['https://worldvectorlogo.com/logo/blazor', 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor']*/)
   // 'NET.smth' = t('dotnet.svg') // for testing dot
   // 'test' = t('dotnet.svg')
 
   ReactiveX = t()
+  Airtable = t()
+  Notion = t('notion-icon-no-text.svg')
+  Zapier = t()
 
   RegExp = t('_icon_hammer-solid.svg')
   'Java Swing' = t('java')
@@ -564,6 +586,7 @@ export class Other {
 export class Crypto {
   Bitcoin = t()
   Ethereum = t()
+  Solidity = t()
   "Web3" = t()
   "web3.js" = t('web3js')
 }
@@ -597,10 +620,13 @@ export class FunAndSports {
   'Bicycle' = tWide('generic/fun/bicycle-solid')
   'Table Tennis' = t('generic/fun/table-tennis-solid.svg') /* search terms: ping pong */
   Padel = t('generic/fun/tennis-ball-svgrepo-com.svg')/* search terms: paddle paddel */
-  Swimming = t('generic/fun/swimmer-solid-wide.svg')
+  Swimming = tWide('generic/fun/swimmer-solid-karol.svg')
   Chess = t('generic/fun/chess-solid.svg')
+  'Triskelion' = t('generic/fun/triskelion4.svg')
   'Business' = t('generic/business--chart-line')
   'Psychology' = t('generic/brain-solid')
+  'Guitar' = t('generic/fun/heavy-metal-sharpen-guitar-like-an-insect-svgrepo-com.svg')
+  'ASG' = t('generic/fun/gun-svgrepo-com.svg')
 }
 
 export function processTopics<T>(inputTopics: T/*: Topics*/): T {

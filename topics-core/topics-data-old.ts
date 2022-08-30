@@ -28,7 +28,7 @@ export const topicsOld = [
   //   )),
   'Facebook',
   'Twitter',
-  tagLogoType('LinkedIn'),
+  // tagLogoType('LinkedIn'),
   'Google Plus',
   // Cucumber
   tagLogoType('PrimeFaces', 'PrimeFaces', null, [],
@@ -51,7 +51,6 @@ export const topicsOld = [
   //     'https://stackshare.io/php',
   //     'https://twitter.com/php_net'
   //   )),
-  materialDesign,
   tag('Django', 'django', null, [],
     new TopicUrls(
       'https://www.djangoproject.com/',
@@ -73,7 +72,7 @@ export const topicsOld = [
   tagNoIcon('Blogging'),
   tagNoIcon('VR'),
   'JavaScript', tag('ECMAScript', 'es6'),
-  'Elm', tag('.NET Core', null),
+  tag('.NET Core', null),
   tagNoIcon('Akka'),
   /*tagLogoType('Ember'),*/ /*'React'*//*, 'Redux',*/ tagNoIcon('React Native'), 'Xamarin', tagNoIcon('Xamarin.Forms'),
   /*tag('TensorFlow', 'tensorflow'),*/ 'OpenCV',
@@ -130,13 +129,13 @@ export const topicsOld = [
   'KickStarter',
   'Sencha',
   'Azure', tagLogoType('Babel'), 'Bower', 'Gulp',
-  'GWT', tagNoIcon('Elixir'), 'Erlang',
+  'GWT',
   'Ansible',
   'Polymer',
   tagNoIcon('Clarity Design System') /* https://vmware.github.io/clarity/ */ ,
   'ng-bootstrap',
   'Capistrano', 'Chef', 'Puppet',
-  'Clojure',  'CoffeeScript', /* TODO ClojureScript */
+  'CoffeeScript', /* TODO ClojureScript */
   'Electron',
   tagNoIcon('MyBatis'),
   'Grails',
