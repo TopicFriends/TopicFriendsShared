@@ -4,6 +4,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { UserOtherProfileDescriptor } from '../other-profiles-core/UserOtherProfilesDescriptors';
 
 @Component({
@@ -16,7 +17,9 @@ export class UserOtherProfileIconComponent implements OnInit {
 
   @Input() readonly descriptor: UserOtherProfileDescriptor
 
-  constructor() { }
+  constructor(
+    public domSanitizer: DomSanitizer,
+  ) { }
 
   ngOnInit() {
   }

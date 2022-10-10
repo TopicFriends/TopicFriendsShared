@@ -3,6 +3,7 @@ import { OtherProfile } from './OtherProfile';
 
 export class UserOtherProfiles {
 
+  eMail?: OtherProfile;
   TopicFriends?: OtherProfile;
   linkedIn?: OtherProfile;
   gitHub?: OtherProfile;

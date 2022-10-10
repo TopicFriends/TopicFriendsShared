@@ -37,7 +37,7 @@ export class OtherProfileUserNameComponent implements OnInit {
     if ( this.thisFormControl.value ) {
       this.userName = this.thisFormControl.value
       this.urlNoProtocol = this.userName && this.descriptor.urlPrefix + this.userName
-      this.fullUrl = this.userName && ('https://' + this.urlNoProtocol)
+      this.fullUrl = this.userName && ((this.descriptor.protocol || 'https://') + this.urlNoProtocol)
     }
   }
 }
