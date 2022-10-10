@@ -51,16 +51,16 @@ export const topicsOld = [
   //     'https://stackshare.io/php',
   //     'https://twitter.com/php_net'
   //   )),
-  tag('Django', 'django', null, [],
-    new TopicUrls(
-      'https://www.djangoproject.com/',
-      'https://en.wikipedia.org/wiki/Django_(web_framework)',
-      'https://github.com/django/django',
-      null,
-      'https://stackoverflow.com/questions/tagged/django',
-      'https://stackoverflow.com/questions/tagged/django',
-      'https://twitter.com/djangoproject'
-    )),
+  // tag('Django', 'django', null, [],
+  //   new TopicUrls(
+  //     'https://www.djangoproject.com/',
+  //     'https://en.wikipedia.org/wiki/Django_(web_framework)',
+  //     'https://github.com/django/django',
+  //     null,
+  //     'https://stackoverflow.com/questions/tagged/django',
+  //     'https://stackoverflow.com/questions/tagged/django',
+  //     'https://twitter.com/djangoproject'
+  //   )),
   tag('PeopleMatcher'),
   tag('TopicFriends', 'PeopleMatcher'),
   tag('UAP', null),
@@ -77,7 +77,7 @@ export const topicsOld = [
   /*tagLogoType('Ember'),*/ /*'React'*//*, 'Redux',*/ tagNoIcon('React Native'), 'Xamarin', tagNoIcon('Xamarin.Forms'),
   /*tag('TensorFlow', 'tensorflow'),*/ 'OpenCV',
   'Appium', tagNoIcon('Robotium'),
-  'Laravel', 'CakePHP', 'Zend Framework', 'CodeIgniter', 'Symfony',
+  /*'Laravel', */'CakePHP', 'Zend Framework', 'CodeIgniter', 'Symfony',
   tag('Responsive Design', null),
   tagNoIcon('SPA'), tag('REST', null), tag('HTTP', null), 'WebRTC', tagLogoType('Upwork'),
   tag('Seneca', 'seneca', null, [], new TopicUrls(
@@ -114,7 +114,7 @@ export const topicsOld = [
   tagNoIcon('RxJava'),
   'Drupal', 'Joomla', 'jQuery Mobile', tagNoIcon('jQuery UI'),
   tagNoIcon('CloudBoost'), /*'Spring',*/ tagLogoType('Vaadin'),
-  'Heroku', 'Vagrant',
+  'Heroku', /*'Vagrant',*/
   tagNoIcon('Fedora' /* Just for compatibility with older data that I (Karol) have in firebase */),
   tagNoIcon('Gentoo Linux'), tag('Arch Linux', 'archlinux'),
   tagNoIcon('Alpine Linux'),
@@ -148,7 +148,7 @@ export const topicsOld = [
   'Flask', tagNoIcon('Pylons'), tagNoIcon('Zope'),
   tagNoIcon('UX'), tagNoIcon('UI'), tagNoIcon('Usability'), tagNoIcon('Accessibility'),
   'Grunt', tag('Browserify', 'browserify-icon'),
-  tagNoIcon('NHibernate'), 'MariaDB', 'Material-UI',
+  tagNoIcon('NHibernate'), /*'MariaDB',*/ 'Material-UI',
   tagNoIcon('FinTech'), tagNoIcon('PropTech'),
 
   tagNoIcon('Law'), tagNoIcon('LOPD'),
@@ -350,7 +350,7 @@ export const topicsOld = [
   )),
   tagNoIcon('Træfik'),
   tagNoIcon('TCP/IP'), // NOTE: slash - special char for storing in firebase
-  tagNoIcon('SQL'),
+  // tagNoIcon('SQL'),
   tagNoIcon('Remote Work'),
   tagNoIcon('Consulting'),
   tagNoIcon('Chirimoya'),

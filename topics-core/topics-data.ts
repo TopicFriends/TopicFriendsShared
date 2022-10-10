@@ -226,6 +226,7 @@ export class Backend {
   'TypeORM' = tNoIcon()
   'TypeGraphQL' = t(`typegraphql-icon.svg` /* https://github.com/MichalLytek/type-graphql/issues/824 */)
   'Apollo' = t(`apollostack.svg`)
+  'Apollo Studio' = t(`apollostack.svg`)
 
   'Node.js' = tWide({
     logo: 'nodejs.svg',
@@ -234,7 +235,10 @@ export class Backend {
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
   'GraalVM' = tWide('graalvm-rgb-cropped.svg')
   GraphQL = t()
+  RabbitMQ = t()
   Swagger = t()
+  Django = t()
+  Laravel = t()
 
   'Express.js' = tWide({
     logo: 'express.svg',
@@ -271,6 +275,7 @@ export class Backend {
 
   Hibernate = t()
   Docker = tWide('docker-simple'/* https://www.docker.com/company/newsroom/media-resources */)
+  'Vagrant' = t()
   Terraform = t()
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t(/* https://www.elastic.co/brand */)
@@ -317,7 +322,12 @@ export class Tools {
   'Jenkins' = t('jenkins-icon')
   'Zeplin' = t()
   'Slack' = t()
+  'PandaDoc' = tNoIcon() /* FIXME logo */
+  'Datadog' = tNoIcon() /* FIXME logo*/
   'Netlify' = t()
+  'VirtualBox' = t({
+    iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
+  })
 }
 
 export class Project_Management_Tools {
@@ -428,9 +438,6 @@ export class OS {
   'Fedora Linux' = t('fedora.svg' /* Officially just "Fedora", but better for filtering*/)
   'macOS' = t('macosx.svg')
   'Microsoft Windows' = t()
-  'VirtualBox' = t({
-    iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
-  })
 }
 
 export class Mobile {
@@ -482,8 +489,10 @@ export class Databases {
   Mongoose = tNoIcon()
   // TODO
   NoSQL = tNoIcon()
+  SQL = tNoIcon()
   PostgreSQL = t()
   MySQL = t()
+  MariaDB = t()
   Oracle = tWide()
   IndexedDB = tNoIcon()
   // TODO: sqlite
@@ -561,6 +570,8 @@ export class Other {
   'Data Structures' = t('project-diagram-solid.svg')
   'OOP - Object Oriented Programming' = t('project-diagram-solid.svg')
   'SOLID Principles' = t('project-diagram-solid.svg')
+  'API Design' = t('project-diagram-solid.svg')
+  'Library Design' = t('project-diagram-solid.svg')
   'FP - Functional Programming' = t('project-diagram-solid.svg')
   'AOP - Aspect-Oriented Programming' = t('project-diagram-solid.svg')
   'Design Patterns' = t('project-diagram-solid.svg')
@@ -589,6 +600,7 @@ export class Crypto {
   Solidity = t()
   "Web3" = t()
   "web3.js" = t('web3js')
+  "ethers.js" = t('ethers.svg')
 }
 
 
