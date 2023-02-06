@@ -53,7 +53,7 @@ export class Frontend {
   'HTML5' = t({logo: 'html-5.svg'})
   'CSS3' = t({logo: 'css-3.svg'})
   'PWA' = tWide()
-  'D3.js' = t({logo: 'd3.svg'}) // Vega [Lite] - on top of d3. From Luis Sanchez
+  'D3.js' = t({logo: 'd3.svg'}) // TODO Vega [Lite] - on top of d3. From Luis Sanchez
   'Chart.js' = t({logo: "chart-js.svg" /* non-standard svg*/})
   'Stylus' = tWide()
   'Less' = tWide()
@@ -83,8 +83,13 @@ export class Frontend {
   })
   xplat = tWide('xplat-logo.png', [899, 393])
   'Web Components' = tWide('webcomponents')
+  // TODO: https://www.webcomponents.org/ logo
   WebPack = t()
+  Vite = t('vitejs')
+  Turbopack = t('turbopack-icon.svg')
+  Turborepo = t('turborepo-icon.svg')
   Angular = t({
+    logo: 'angular-icon',
     urls: new TopicUrls(
       'https://angular.io/',
       'https://en.wikipedia.org/wiki/Angular_(application_platform)',
@@ -147,10 +152,27 @@ export class Frontend {
       Capacitor: tNoIcon(),
     }
   })
-  Stencil = tWide()
+  Stencil = tWide('stenciljs-icon.svg')
+  "WebKit" = t()
+  "NW.js" = t('nodewebkit') /* NW.js */
+  'Electron' = t()
+  'Expo' = t('expo-icon')
   'Vue.js' = t({logo: 'vue'})
-  'Svelte' = t()
+  'Gridsome' = t({logo: 'gridsome-icon.svg'})
+  'Svelte' = t('svelte-icon')
+  // TODO Phoenix  https://www.phoenixframework.org/  supposedly most loved; https://github.com/phoenixframework/phoenix
+  'SolidJS' = t('solidjs-icon')
+  'Qwik' = t('qwik')
+  'Astro' = t('astro-icon.svg')
+  'Mithril' = t()
+  'Marko' = tWide('marko-cropped.svg')
+  'Alpine.js' = tWide('alpinejs-icon.svg')
+  'Rax' = t()
+  'Riot' = t()
+  'Vercel' = t('vercel-icon.svg')
+  'Storyblok' = t('storyblok-icon.svg')
 
+  // TODO: https://web.dev/
 
   Lodash = t()
   'TypeDI' = tNoIcon() // TODO move to Frontend & Backend / JavaScript / TypeScript
@@ -164,16 +186,24 @@ export class Frontend {
   'ApexCharts.js' = tNoIcon()
   AngularFire = tNoIcon()
   NgRx = t()
-  NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
+  // NGXS = t({logo: 'ngxs.png', logoSize: [442, 132]})
+  NGXS = t() // https://github.com/adisreyaj/store/pull/1/commits/4a7702048653a5261694c40b6ceb61f77a82b59a#diff-feb17517a55f6687ca9433cf00fab45526e32f6b05f018096c0806f1dc767ac8
   MobX = t()
   "MobX-State-Tree" = t(`mobx-state-tree-logo.svg`
-    /* https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg */)
+    /* https://github.com/mobxjs/mobx-state-tree/blob/b6c1c9b29d7bd7525ac6588f8f67f6c13eb17b2b/website/static/img/mobx-state-tree-logo.svg
+    * https://github.com/mobxjs/mobx-state-tree/blob/master/website/static/img/mobx-state-tree-logo.svg
+    * */)
   Redux = t()
   "Redux Toolkit" = t(`redux--toolkit.svg`)
+  Recoil = tWide('recoil-icon')
+
   React = t()
+  Preact = t()
   Gatsby = t('Gatsby-Monogram.svg', /* https://www.gatsbyjs.com/guidelines/logo */)
   "Next.js" = t('nextjs-icon.svg')
+  "Remix" = t('remix-icon.svg') /* https://remix.run/ */
   // TODO: Chakra
+  GreenSock = t('greensock-icon.svg')
   Ember = tWide()
   WebSocket = t()
   'Chrome Extensions' = t('chrome.svg')
@@ -183,6 +213,8 @@ export class Frontend {
   Workbox = tWide('Workbox-Logo-Grey.svg')
   'SVG.js' = t('svg-js.png' /* WTF, PNG for an SVG lib :D */)
   'Storybook' = t('storybook-icon.svg')
+  // TODO: storyblok?
+  // TODO: SVGPorn
   'DDD - Domain-Driven Design' = t('project-diagram-solid.svg')
   // TODO Scully
   Lighthouse = t('google--lighthouse-logo.svg' /*
@@ -210,7 +242,9 @@ export class Frontend {
 
 export class JavaScript {
   Promises = t()
-  RxJS = tNoIcon()
+  JavaScript = t()
+  // RxJS = tNoIcon()
+  RxJS = t('reactivex')
   // TODO: more like ecosystem
 }
 
@@ -229,7 +263,7 @@ export class Backend {
   'Apollo Studio' = t(`apollostack.svg`)
 
   'Node.js' = tWide({
-    logo: 'nodejs.svg',
+    logo: 'nodejs-icon.svg',
     logoSmallIcon: 'nodejs-icon.svg',
   })
   'NestJS' = t(`nest--logo-small.ede75a6b.svg`)
@@ -262,6 +296,7 @@ export class Backend {
   })
 
   'Deno' = t()
+  "Bun" = tWide() /* TODO: mark as non-main experience; written in Zig */
 
 
   KeystoneJS = t({
@@ -276,7 +311,7 @@ export class Backend {
   Hibernate = t()
   Docker = tWide('docker-simple'/* https://www.docker.com/company/newsroom/media-resources */)
   'Vagrant' = t()
-  Terraform = t()
+  Terraform = t('terraform-icon.svg')
   Kubernetes = t(/* they had a typo: 'kubernets.svg'*/)
   ElasticSearch = t(/* https://www.elastic.co/brand */)
   NGINX = tWide()
@@ -293,7 +328,7 @@ export class Frontend_And_Backend_App_Platforms {
 
 export class Testing {
   TestCafe = t()
-  Cypress = t(`cypress-io-logo-round-flat.svg`)
+  Cypress = t('cypress-icon.svg' /*`cypress-io-logo-round-flat.svg`*/)
   Spock = tNoIcon()
   Jest = t()
   Karma = t()
@@ -321,9 +356,10 @@ export class Tools {
   'Travis CI' = t()
   'Jenkins' = t('jenkins-icon')
   'Zeplin' = t()
-  'Slack' = t()
+  'Slack' = t('slack-icon.svg')
   'PandaDoc' = tNoIcon() /* FIXME logo */
-  'Datadog' = tNoIcon() /* FIXME logo*/
+  'Datadog' = t('datadog-icon')
+  'Dynatrace' = t('dynatrace-icon')
   'Netlify' = t()
   'VirtualBox' = t({
     iconUrl: 'https://icons8.com/icons/set/oracle-vm-virtualbox'
@@ -351,16 +387,17 @@ export class Project_Management_Tools {
 
 export class Graphics {
   SVG = t({
-    logo: 'svg-logo-v.svg',
+    // logo: 'svg-logo-v.svg',
     categories: 'Frontend',
   })
   Figma = t()
+  SVGator = tWide('svgator-icon.svg')
   InVision = t()
   Blender = tWide()
   'Adobe Illustrator' = t('Adobe_Illustrator_CC_icon.svg')
   'Adobe Photoshop' = t('adobe--photoshop-32x32.svg')
   'Adobe Creative Cloud' = t('adobe--creativecloud-32x32.svg')
-  'Affinity Designer' = t('affinity-designer.png')
+  'Affinity Designer' = t('affinity-designer.svg')
   'Gravit Designer' = t('gravitio-icon.svg')
   'GIMP' = t('gimp-wilber-big.png')
   'Inkscape' = t('inkscape-logo.svg')
@@ -370,8 +407,9 @@ export class Languages {
   'JetBrains MPS' = t()
   Java = t()
   Go = tWide('go-logo-white.svg')
-  TypeScript = t()
+  TypeScript = t('typescript-icon')
   Kotlin = t({
+    logo: 'kotlin-icon.svg',
     categories: 'Mobile',
   })
   Swift = t()
@@ -393,6 +431,9 @@ export class Languages {
   Scala = t()
   Clojure = t()
   Perl = t()
+  Raku = tWide('raku-cropped.svg')
+  Fortran = t()
+  // TODO
 
   C = t()
   'C++' = t()
@@ -400,6 +441,7 @@ export class Languages {
   Dart = t()
   Groovy = tWide()
   Elm = t()
+  Zig = tWide('zig-icon.svg')
   Rust = t()
   WebAssembly = t({
     categories: "Frontend",
@@ -407,12 +449,12 @@ export class Languages {
   })
   AssemblyScript = t()
 
-  Bash = t()
+  Bash = t('bash-icon.svg')
   Lua = t('lua-no-text.svg')
   Eiffel = tWide('eiffel-no-text.svg')
   Erlang = tWide('erlang-no-text.svg')
   Elixir = tWide('elixir-lang-icon.svg')
-  Haskell = t()
+  Haskell = t('haskell-icon')
   Lisp = tWide('lisp-logo.svg')
   OCaml = tWide('ocaml-no-text.svg'/* https://ocaml.org/docs/logos.html  http://ocaml.org/logo/Colour/SVG/colour-logo.svg
       Square -- https://ocaml.org/img/OCaml_Sticker.svg */)
@@ -432,7 +474,7 @@ export class OS {
   Linux = t('tux.svg')
   'Ubuntu Linux' = t('ubuntu.svg')
   'SUSE Linux' = tWide('suse.svg')
-  'RedHat Linux' = t('redhat.svg')
+  'RedHat Linux' = t('redhat-icon.svg')
   'CentOS Linux' = tWide('centos.svg')
   'Debian Linux' = t('debian.svg')
   'Fedora Linux' = t('fedora.svg' /* Officially just "Fedora", but better for filtering*/)
@@ -442,7 +484,8 @@ export class OS {
 
 export class Mobile {
   iOS = t()
-  Android = t({
+  Android = tWide({
+    logo: 'android-icon.svg',
     subTopics: {
       'Recycler View': tNoIcon({}),
     }
@@ -451,12 +494,13 @@ export class Mobile {
   Cordova = t()
   PhoneGap = t()
   NativeScript = t()
-  Flutter = tWide('flutter-cropped.svg')
+  Flutter = tWide('flutter.svg')
   'Java Micro Edition' = t('java')
   'BlackBerry' = tNoIcon()
 }
 
 export class Cloud {
+  // TODO: cloud-native
   'Firebase' = t({
     subTopics: {
       // most are from firebase console left navbar:
@@ -478,28 +522,30 @@ export class Cloud {
     iconUrl: 'logo_gcp_hexagon_rgb.png'
     /* logos SVG-s: https://googlecloudcheatsheet.withgoogle.com/ */
   })
-  Algolia = tWide()
+  Algolia = t('algolia-cropped.svg')
   AWS = tWide()
   "Microsoft Azure" = t('microsoft-azure')
 }
 
 export class Databases {
-  MongoDB = tWide()
+  MongoDB = tWide('mongodb-icon.svg')
   ArangoDB = tWide()
   Mongoose = tNoIcon()
   // TODO
   NoSQL = tNoIcon()
   SQL = tNoIcon()
   PostgreSQL = t()
-  MySQL = t()
+  MySQL = t('mysql-icon')
   MariaDB = t()
   Oracle = tWide()
   IndexedDB = tNoIcon()
+  SurrealDB = t('surrealdb-icon')
   // TODO: sqlite
 }
 
 export class Version_Control {
   Git = t({
+    logo: 'git-icon.svg',
     subTopics: {
       Rebase: {},
       Submodules: {},
@@ -526,8 +572,9 @@ export class Version_Control {
 * Grouping (pick the right granularity based on count) :
 */
 export class Other {
-  'Mailgun' = t()
-  'YouTube' = tWide()
+  'Mailgun' = t('mailgun-icon.svg')
+  'reCAPTCHA' = t('recaptcha.svg') // TODO: crop icon only
+  'YouTube' = tWide('youtube-icon.svg')
   'LinkedIn' = t('linkedin-icon')
   'Spotify' = t()
   'AudioSalad' = t(`audiosalad-traced.svg`)
@@ -548,7 +595,20 @@ export class Other {
   ReactiveX = t()
   Airtable = t()
   Notion = t('notion-icon-no-text.svg')
-  Zapier = t()
+  Coda = t('coda-icon.svg')
+  Observable = t('observablehq.svg')
+  Carbide = t('carbide.svg')
+  // FIXME Bubble = t('observablehq.svg')
+  Zapier = t('zapier-icon')
+  IFTTT = tWide('ifttt.svg')
+  // ======== LowCode / NoCode / CMS:
+  WebFlow = t('webflow-mark-vector-blue.svg') /* https://brand-at.webflow.io/resources#logos */
+  Wix = tWide()
+  'Builder.io' = t('builder-io-icon')
+  'Budibase' = tWide('budibase-icon')
+  'Bubble' = t('bubble-icon')
+  'Framer' = t()
+
 
   RegExp = t('_icon_hammer-solid.svg')
   'Java Swing' = t('java')
@@ -604,8 +664,18 @@ export class Crypto {
 }
 
 
+/** AI / Machine Learning ML */
 export class AI {
+  OpenAI = t('openai-icon')
+  'Open Assistant' = tWide('open-assistant-icon-wide.svg') // https://github.com/LAION-AI/Open-Assistant
+  'LAION' = t()
+  'Stable Diffusion' = tWide('stable-diffusion-logo-vectorizer.ai.svg') // https://github.com/LAION-AI/Open-Assistant
+  'Stability AI' = tWide('stability-ai-vectorizer.ai.svg') // https://github.com/LAION-AI/Open-Assistant https://www.linkedin.com/company/stability-ai/
+  'Google Colaboratory' = tWide('google-colab-icon-wide.svg')
   TensorFlow = t()
+  'Hugging Face' = tWide('huggingface_logo-noborder.svg')
+  Jupyter = tWide('jupyter-icon2')
+  PyTorch = tWide('pytorch-icon')
   Keras = t/*Wide*/('keras.svg'/*{
     https://github.com/valohai/ml-logos/blob/master/keras.svg
     logo: 'keras-logo-2018-large-1200.png',
@@ -638,7 +708,7 @@ export class FunAndSports {
   'Business' = t('generic/business--chart-line')
   'Psychology' = t('generic/brain-solid')
   'Guitar' = t('generic/fun/heavy-metal-sharpen-guitar-like-an-insect-svgrepo-com.svg')
-  'ASG' = t('generic/fun/gun-svgrepo-com.svg')
+  'ASG' = t('generic/fun/gun.svg')
 }
 
 export function processTopics<T>(inputTopics: T/*: Topics*/): T {
