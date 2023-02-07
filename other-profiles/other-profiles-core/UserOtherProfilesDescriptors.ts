@@ -1,11 +1,11 @@
-import { FormControl } from '@angular/forms'
+import { UntypedFormControl } from '@angular/forms'
 import { OtherProfile } from './OtherProfile';
 
 export function getOtherProfileName(otherProfile: OtherProfile) {
   return otherProfile && otherProfile.userName
 }
 
-export function otherProfileUserName(formControl: FormControl) {
+export function otherProfileUserName(formControl: UntypedFormControl) {
   // return formControl.value || "" // || "" to prevent firebase complaining about undefined
   return formControl.value || null // || "" to prevent firebase complaining about undefined
 }

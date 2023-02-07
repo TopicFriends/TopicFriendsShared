@@ -4,9 +4,9 @@ import {
   OnInit,
 } from '@angular/core';
 import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
+  UntypedFormBuilder,
+  UntypedFormControl,
+  UntypedFormGroup,
 } from '@angular/forms'
 import { UserProfileInputs } from '../../UserProfileInputs';
 import { UserOtherProfiles } from '../other-profiles-core/UserOtherProfiles';
@@ -29,24 +29,24 @@ export class UserOtherProfilesComponent implements OnInit {
   // descriptors: UserOtherProfilesDescriptors<UserOtherProfileDescriptor> = [
   descriptorsMap = new UserOtherProfilesDescriptorsDefs()
 
-  formControls: UserOtherProfilesDescriptorVals<FormControl> = {} as any
+  formControls: UserOtherProfilesDescriptorVals<UntypedFormControl> = {} as any
 
   descriptorsList = UserOtherProfilesDescriptorsDefs.array
 
-  @Input() public parentFormGroup: FormGroup = new FormGroup({})
+  @Input() public parentFormGroup: UntypedFormGroup = new UntypedFormGroup({})
   @Input() public userProfileInputs: UserProfileInputs
   @Input() public otherProfiles: UserOtherProfiles
 
 
-  public formGroup: FormGroup;
+  public formGroup: UntypedFormGroup;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     // private userProfileService: UserProfileService,
   ) {
     for ( let key in this.descriptorsMap ) {
       if (this.descriptorsMap.hasOwnProperty(key)) {
-        this.formControls[key] = new FormControl()
+        this.formControls[key] = new UntypedFormControl()
       }
     }
     this.formGroup = this.formBuilder.group(this.formControls)
