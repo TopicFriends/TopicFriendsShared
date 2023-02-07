@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {UntypedFormControl, UntypedFormGroup} from '@angular/forms'
+import {FormControl, FormGroup} from '@angular/forms'
 import { UserOtherProfileDescriptor } from '../../other-profiles-core/UserOtherProfilesDescriptors'
 
 @Component({
@@ -10,8 +10,8 @@ import { UserOtherProfileDescriptor } from '../../other-profiles-core/UserOtherP
 export class OtherProfileUserNameComponent implements OnInit {
 
   @Input() descriptor: UserOtherProfileDescriptor
-  @Input() parentFormGroup: UntypedFormGroup
-  @Input() thisFormControl: UntypedFormControl
+  @Input() parentFormGroup: FormGroup
+  @Input() thisFormControl: FormControl
 
   get isEditable() { return false }
 
