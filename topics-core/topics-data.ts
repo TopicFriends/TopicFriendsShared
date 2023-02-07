@@ -88,6 +88,7 @@ export class Frontend {
   Vite = t('vitejs')
   Turbopack = t('turbopack-icon.svg')
   Turborepo = t('turborepo-icon.svg')
+  pnpm = t('pnpm-icon')
   Angular = t({
     logo: 'angular-icon',
     urls: new TopicUrls(
